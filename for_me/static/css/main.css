@@ -1,0 +1,10 @@
+body  { font-family:Verdana, Geneva, sans-serif; font-size:10pt; color:#828282; }
+td    { font-family:Verdana, Geneva, sans-serif; font-size:10pt; color:#828282; }
+.title { font-family:Verdana, Geneva, sans-serif; font-size: 10pt; color:#828282; }
+/*.title { font-size: inherit;  }*/
+/*.title { font-size: 11pt; line-height: 14pt;  }*/
+.itemlist { padding-right: 5px;}
+.pagetop { font-family:Verdana, Geneva, sans-serif; font-size: 10pt; color:#222222; }
+.pagetop a:visited { color:#000000;}
+.topsel a:link, .topsel a:visited { color:#ffffff; }
+.a {text-decoration:none}

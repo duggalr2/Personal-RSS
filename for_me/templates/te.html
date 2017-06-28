@@ -1,0 +1,131 @@
+{#{% load staticfiles %}#}
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>RSS Feed</title>#}
+{#    <link rel="stylesheet" href="{% static 'css/main.css' %}">#}
+{#</head>#}
+{##}
+
+
+{#<form method="POST">#}
+{#    Url (in RSS format!): <input type="text" name="url"><br/>{% csrf_token %}#}
+{#    <input type="submit" value="Submit" />#}
+{#</form><br/><br/>#}
+{##}
+{#{% if messages %}#}
+{#<div class="messages">#}
+{#    {% for message in messages %}#}
+{#        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>#}
+{#    {% endfor %}#}
+{#</div>#}
+{#{% endif %}#}
+
+{#<body>#}
+
+{#    <div >#}
+{#        <center>#}
+{#            <table id="hnmain" border="0" cellpadding="0" cellspacing="0" width="85%" bgcolor="#f6f6ef">#}
+{#                <tbody>#}
+                    {# NavBar #}
+{#                    <tr>#}
+{#                        <td bgcolor="#ff6600">#}
+{#                            <table  border="0" cellpadding="0" cellspacing="0" width="100%" style="padding: 2px">#}
+{#                                <tbody>#}
+{#                                    <tr>#}
+{#                                        <td style="line-height:12pt; height:10px;">#}
+{#                                            <span class="pagetop">#}
+{#                                                <b class="feed">#}
+{#                                                    <a href="{% url 'home' %}" style="text-decoration: none;">News Feed</a>#}
+{#                                                    |#}
+{#                                                </b>#}
+{#                                                <b class="twitter">#}
+{#                                                    <a href="{% url 'twitter' %}" style="text-decoration: none;">Twitter</a>#}
+{#                                                    |#}
+{#                                                </b>#}
+{#                                                <b class="bookmarks">#}
+{#                                                    <a href="{% url 'bookmark' %}" style="text-decoration: none;">Bookmarks</a>#}
+{##}
+{#                                                </b>#}
+{##}
+{#                                            </span>#}
+{#                                        </td>#}
+
+
+{% extends 'base.html' %}
+{% block content %}
+                                        <td style="text-align:right;padding-right:4px;">
+                                            <span class="pagetop">
+                                                <form method="POST">
+                                                    Url (Rss Format): <input type="text" name="url">{% csrf_token %}
+                                                    <input type="submit" value="Submit" />
+                                                </form>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        </tr>
+                        <tr style="height: 10px"></tr>
+                        <tr>
+                            <td>
+                                <table border="0" cellpadding="0" cellspacing="0" class="itemlist">
+                                    <tbody>
+                                        {% for i in object_list %}
+                                            <form method='GET' action='{% url 'feed_bookmark' new_id=i.id %}'>
+                                            {{ form.as_p }}
+                                                <tr class="athing">
+                                                    <td align="right" valign="top" class="title">
+                                                        <span>{{ i.id }}. </span>
+                                                    </td>
+                                                    <td class="title">
+                                                        <input id = 'im' type='image' src="https://news.ycombinator.com/grayarrow2x.gif" width="11">&nbsp;<a href="{{ i.link }}" style="text-decoration: none; color: black;">{{ i.title }}</a>
+                                                        <input name='feed_bookmark' type='hidden' value="bookmark" width="12" >
+                                                    </td>
+                                            </form>
+
+                                            <tr>
+                                                <td colspan="2"></td>
+                                            </tr>
+                                            <tr style="height:5px"></tr>
+                                        {% endfor %}
+{% endblock %}
+
+
+
+
+{#                                    <tr style="height:5px"></tr>#}
+{#                                    <tr style="height:7px"></tr>#}
+
+{#                                    <td>#}
+{#                                        {% if object_list.has_next %}#}
+{#                                            <div style="margin-left: 90%;">#}
+{#                                                <a href="?page={{ object_list.next_page_number }}" style="text-decoration: none; color: black" rel="nofollow">More</a>#}
+{#                                            </div>#}
+{#                                        {% endif %}#}
+{#                                    </td>#}
+{#                                    </tbody>#}
+{##}
+{#                                </table>#}
+{#             </table>#}
+{#        </center>#}
+{#    </div>#}
+{##}
+{##}
+{##}
+{#</body>#}
+
+{#</html>#}
+
+{#<script>#}
+{#    function bm() {#}
+{#        document.getElementById('im').type = 'hidden';#}
+{#        {% for i in object_list %}#}
+{#            console.log("{{ i.id }}");#}
+{#        {% endfor %}#}
+{##}
+{#    }#}
+{##}
+{#</script>#}
