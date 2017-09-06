@@ -42,6 +42,31 @@ def home(request):
     return render(request, 'te.html', {'object_list': pag(b, request)})
 
 
+def reddit(request):
+    reddit_list = Feeds.objects.all().filter(category='Reddit').order_by('-pk')
+    return render(request, 'reddit.html', {'object_list': pag(reddit_list, request)})
+
+
+def google(request):
+    google_list = Feeds.objects.all().filter(category='Google').order_by('-pk')
+    return render(request, 'google.html', {'object_list': pag(google_list, request)})
+
+
+def hacker_news(request):
+    hn_list = Feeds.objects.all().filter(category='Hacker News').order_by('-pk')
+    return render(request, 'hacker_news.html', {'object_list': pag(hn_list, request)})
+
+
+def python(request):
+    python_list = Feeds.objects.all().filter(category='Python').order_by('-pk')
+    return render(request, 'python.html', {'object_list': pag(python_list, request)})
+
+
+def other(request):
+    other_list = Feeds.objects.all().filter(category='Other').order_by('-pk')
+    return render(request, 'other.html', {'object_list': pag(other_list, request)})
+
+
 def twitter(request):
     """Twitter Page"""
     tweets = Tweet.objects.all().order_by('-pk')

@@ -91,6 +91,21 @@
                                                     </td>
                                                     <td class="title">
                                                         <input id = 'im' type='image' src="https://news.ycombinator.com/grayarrow2x.gif" width="11">&nbsp;<a href="{{ i.link }}" style="text-decoration: none; color: black;">{{ i.title }}</a>
+                                                            {% if i.category == 'Google' %}
+                                                                <span><a href="{% url 'google' %}">{{ i.category }}</a></span>
+                                                            {% endif %}
+                                                            {% if i.category == 'Reddit' %}
+                                                                <span><a href="{% url 'reddit' %}">{{ i.category }}</a></span>
+                                                            {% endif %}
+                                                            {% if i.category == 'Hacker News' %}
+                                                                <span><a href="{% url 'hacker_news' %}">{{ i.category }}</a></span>
+                                                            {% endif %}
+                                                            {% if i.category == 'Python' %}
+                                                                <span><a href="{% url 'python' %}">{{ i.category }}</a></span>
+                                                            {% endif %}
+                                                            {% if i.category == 'Other' %}
+                                                                <span><a href="{% url 'other' %}">{{ i.category }}</a></span>
+                                                            {% endif %}
                                                         <input name='feed_bookmark' type='hidden' value="bookmark" width="12" >
                                                     </td>
                                             </form>

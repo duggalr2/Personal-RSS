@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+                                        <td style="text-align:right;padding-right:4px;">
+
+
+
+                                            <span class="pagetop">
+                                                <form method="POST">
+                                                    Url (Rss Format): <input type="text" name="url">{% csrf_token %}
+                                                    <input type="submit" value="Submit" />
+
+                                                </form>
+
+                                                <form method="GET">
+                                                    <input name='refresh' type="submit" value="Refresh Feed" />
+                                                </form>
+
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        </tr>
+                        <tr style="height: 10px"></tr>
+                        <tr>
+                            <td>
+                                <table border="0" cellpadding="0" cellspacing="0" class="itemlist">
+                                    <tbody>
+                                        {% for i in object_list %}
+                                            <form method='GET' action='{% url 'feed_bookmark' new_id=i.id %}'>
+                                            {{ form.as_p }}
+                                                <tr class="athing">
+                                                    <td align="right" valign="top" class="title">
+                                                        <span>{{ i.id }}. </span>
+                                                    </td>
+                                                    <td class="title">
+                                                        <input id = 'im' type='image' src="https://news.ycombinator.com/grayarrow2x.gif" width="11">&nbsp;<a href="{{ i.link }}" style="text-decoration: none; color: black;">{{ i.title }}</a> <span><a href="{% url 'reddit' %}">{{ i.category }}</a></span>
+                                                        <input name='feed_bookmark' type='hidden' value="bookmark" width="12" >
+                                                    </td>
+                                            </form>
+
+                                            <tr>
+                                                <td colspan="2"></td>
+                                            </tr>
+                                            <tr style="height:5px"></tr>
+                                        {% endfor %}
+{% endblock %}

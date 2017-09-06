@@ -20,6 +20,11 @@ from app_file import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^home/', views.home, name='home'),
+    url(r'^reddit/', views.reddit, name='reddit'),
+    url(r'^google/', views.google, name='google'),
+    url(r'^hn/', views.hacker_news, name='hacker_news'),
+    url(r'^python/', views.python, name='python'),
+    url(r'^other/', views.other, name='other'),
     url(r'^tweets/', views.twitter, name='twitter'),
     url(r'^(?P<new_id>\d+)/feedbm/$', views.bookmark, name='feed_bookmark'),
     url(r'^bookmark/', views.bookmark_page, name='bookmark'),

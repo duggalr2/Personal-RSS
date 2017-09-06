@@ -2,20 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f6c7a18-e02b-4442-82ea-ea901599be0a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/for_me/app_file/migrations/0001_initial.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/for_me/app_file/migrations/0002_url.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/for_me/app_file/migrations/0003_tweet.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/for_me/app_file/migrations/0004_bookmark.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/for_me/db.sqlite3" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/for_me/db.nonsense" afterPath="$PROJECT_DIR$/for_me/db.nonsense" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/for_me/app_file/brute_feed.py" afterPath="$PROJECT_DIR$/for_me/app_file/brute_feed.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/for_me/app_file/models.py" afterPath="$PROJECT_DIR$/for_me/app_file/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/for_me/app_file/rss_feed.py" afterPath="$PROJECT_DIR$/for_me/app_file/rss_feed.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/for_me/app_file/tweet_feed.py" afterPath="$PROJECT_DIR$/for_me/app_file/tweet_feed.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/for_me/app_file/views.py" afterPath="$PROJECT_DIR$/for_me/app_file/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/for_me/for_me/urls.py" afterPath="$PROJECT_DIR$/for_me/for_me/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/for_me/templates/te.html" afterPath="$PROJECT_DIR$/for_me/templates/te.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/for_me/templates/twitter.html" afterPath="$PROJECT_DIR$/for_me/templates/twitter.html" />
     </list>
     <ignored path="all_in_one.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,7 +21,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/all_in_one$brute_feed.coverage" NAME="brute_feed Coverage Results" MODIFIED="1504204313526" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/for_me/app_file" />
+    <SUITE FILE_PATH="coverage/all_in_one$brute_feed.coverage" NAME="brute_feed Coverage Results" MODIFIED="1504664298886" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/for_me/app_file" />
     <SUITE FILE_PATH="coverage/all_in_one$model_topics.coverage" NAME="model_topics Coverage Results" MODIFIED="1504123920512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/for_me/app_file" />
     <SUITE FILE_PATH="coverage/all_in_one$tweet_feed.coverage" NAME="tweet_feed Coverage Results" MODIFIED="1504201747594" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/for_me/app_file" />
     <SUITE FILE_PATH="coverage/all_in_one$rss_feed.coverage" NAME="rss_feed Coverage Results" MODIFIED="1504124601238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/for_me/app_file" />
@@ -45,7 +38,7 @@
       <file leaf-file-name="rss_feed.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/for_me/app_file/rss_feed.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1170">
+            <state relative-caret-position="525">
               <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
@@ -58,8 +51,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/for_me/app_file/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+            <state relative-caret-position="432">
+              <caret line="66" column="33" selection-start-line="66" selection-start-column="33" selection-end-line="66" selection-end-column="33" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -67,63 +60,60 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="te.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/for_me/templates/te.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1005">
-              <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="brute_feed.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="brute_feed.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/for_me/app_file/brute_feed.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="48" column="53" selection-start-line="48" selection-start-column="53" selection-end-line="48" selection-end-column="53" />
+            <state relative-caret-position="-3">
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
-                <marker date="1504205006000" expanded="true" signature="811:839" ph="SELECT * FRO... app_file_feeds" />
-                <marker date="1504205006000" expanded="true" signature="1108:1151" ph="INSERT INTO app_file_feeds... " />
+                <marker date="1504664452000" expanded="true" signature="1231:1259" ph="SELECT * FRO... app_file_feeds" />
+                <marker date="1504664452000" expanded="true" signature="1709:1755" ph="INSERT INTO app_file_feeds... " />
+                <marker date="1504664452000" expanded="true" signature="1989:2050" ph="INSERT INTO app_file_feeds... " />
+                <marker date="1504664452000" expanded="true" signature="2139:2175" ph="INSERT INTO app_file_feeds... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/for_me/app_file/models.py">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/for_me/for_me/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="435">
+              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tweet_feed.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/for_me/app_file/tweet_feed.py">
+      <file leaf-file-name="te.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/for_me/templates/te.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-                <marker date="1504202922000" expanded="true" signature="3740:3768" ph="SELECT * FRO... app_file_tweet" />
-                <marker date="1504202922000" expanded="true" signature="4250:4302" ph="INSERT INTO app_file_tweet... " />
-                <marker date="1504202922000" expanded="true" signature="4398:4448" ph="INSERT INTO app_file_tweet... " />
-                <marker date="1504202922000" expanded="true" signature="4542:4602" ph="INSERT INTO app_file_tweet... " />
-                <marker date="1504202922000" expanded="true" signature="4748:4808" ph="INSERT INTO app_file_tweet... " />
-                <marker date="1504202922000" expanded="true" signature="4901:4935" ph="SELECT MAX(I... app_file_tweet" />
-                <marker date="1504202922000" expanded="true" signature="5126:5186" ph="INSERT INTO app_file_tweet... " />
-                <marker date="1504202922000" expanded="true" signature="5332:5392" ph="INSERT INTO app_file_tweet... " />
-                <marker date="1504202922000" expanded="true" signature="5590:5630" ph="INSERT INTO app_file_tweet... " />
-                <marker date="1504202922000" expanded="true" signature="5752:5792" ph="INSERT INTO app_file_tweet... " />
-              </folding>
+            <state relative-caret-position="423">
+              <caret line="100" column="126" selection-start-line="100" selection-start-column="126" selection-end-line="100" selection-end-column="126" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hacker_news.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/for_me/templates/hacker_news.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="588">
+              <caret line="47" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="47" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -133,12 +123,18 @@
       <list>
         <option value="$PROJECT_DIR$/for_me/app_file/main.py" />
         <option value="$PROJECT_DIR$/for_me/app_file/rss_feed.py" />
-        <option value="$PROJECT_DIR$/for_me/app_file/models.py" />
         <option value="$PROJECT_DIR$/for_me/templates/twitter.html" />
         <option value="$PROJECT_DIR$/for_me/app_file/tweet_feed.py" />
-        <option value="$PROJECT_DIR$/for_me/app_file/views.py" />
-        <option value="$PROJECT_DIR$/for_me/templates/te.html" />
+        <option value="$PROJECT_DIR$/for_me/app_file/models.py" />
+        <option value="$PROJECT_DIR$/for_me/templates/reddit.html" />
+        <option value="$PROJECT_DIR$/for_me/templates/google.html" />
+        <option value="$PROJECT_DIR$/for_me/templates/hacker_news.html" />
         <option value="$PROJECT_DIR$/for_me/app_file/brute_feed.py" />
+        <option value="$PROJECT_DIR$/for_me/templates/python.html" />
+        <option value="$PROJECT_DIR$/for_me/app_file/views.py" />
+        <option value="$PROJECT_DIR$/for_me/templates/other.html" />
+        <option value="$PROJECT_DIR$/for_me/templates/te.html" />
+        <option value="$PROJECT_DIR$/for_me/for_me/urls.py" />
       </list>
     </option>
   </component>
@@ -159,7 +155,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="1" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -336,6 +332,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="true" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RunManager" selected="Python.brute_feed">
     <configuration default="false" name="rss_feed" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -657,20 +654,20 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42739725" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42739725" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -724,8 +721,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-            <marker date="1504205006000" expanded="true" signature="811:839" ph="SELECT * FRO... app_file_feeds" />
-            <marker date="1504205006000" expanded="true" signature="1108:1151" ph="INSERT INTO app_file_feeds... " />
+            <marker date="1504664452000" expanded="true" signature="1231:1259" ph="SELECT * FRO... app_file_feeds" />
+            <marker date="1504664452000" expanded="true" signature="1709:1755" ph="INSERT INTO app_file_feeds... " />
+            <marker date="1504664452000" expanded="true" signature="1989:2050" ph="INSERT INTO app_file_feeds... " />
+            <marker date="1504664452000" expanded="true" signature="2139:2175" ph="INSERT INTO app_file_feeds... " />
           </folding>
         </state>
       </provider>
@@ -849,6 +848,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#24#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -856,13 +858,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/for_me/app_file/model_topics.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -901,14 +896,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/for_me/app_file/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/for_me/app_file/tweet_feed.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -929,24 +916,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/for_me/templates/te.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1005">
-          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/for_me/app_file/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/for_me/app_file/twitter_search_words">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -954,16 +923,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/for_me/app_file/urls">
+    <entry file="file://$PROJECT_DIR$/for_me/app_file/model_topics.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="495">
+          <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+            <marker date="1497897661000" expanded="true" signature="644:675" ph="SELECT link app_file_feeds" />
+            <marker date="1497897661000" expanded="true" signature="922:969" ph="INSERT INTO app_file_feeds... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/for_me/templates/google.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="47" column="14" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/for_me/app_file/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="58" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/for_me/app_file/rss_feed.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
+        <state relative-caret-position="525">
           <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
@@ -972,15 +962,83 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/for_me/templates/reddit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="47" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="47" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/for_me/templates/python.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="47" column="14" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/for_me/templates/other.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="34" column="64" selection-start-line="34" selection-start-column="64" selection-end-line="34" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/for_me/app_file/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="66" column="33" selection-start-line="66" selection-start-column="33" selection-end-line="66" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/for_me/templates/hacker_news.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="47" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="47" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/for_me/app_file/brute_feed.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" column="53" selection-start-line="48" selection-start-column="53" selection-end-line="48" selection-end-column="53" />
+        <state relative-caret-position="-3">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-            <marker date="1504205006000" expanded="true" signature="811:839" ph="SELECT * FRO... app_file_feeds" />
-            <marker date="1504205006000" expanded="true" signature="1108:1151" ph="INSERT INTO app_file_feeds... " />
+            <marker date="1504664452000" expanded="true" signature="1231:1259" ph="SELECT * FRO... app_file_feeds" />
+            <marker date="1504664452000" expanded="true" signature="1709:1755" ph="INSERT INTO app_file_feeds... " />
+            <marker date="1504664452000" expanded="true" signature="1989:2050" ph="INSERT INTO app_file_feeds... " />
+            <marker date="1504664452000" expanded="true" signature="2139:2175" ph="INSERT INTO app_file_feeds... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/for_me/app_file/urls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/for_me/for_me/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/for_me/templates/te.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="100" column="126" selection-start-line="100" selection-start-column="126" selection-end-line="100" selection-end-column="126" />
+          <folding />
         </state>
       </provider>
     </entry>
