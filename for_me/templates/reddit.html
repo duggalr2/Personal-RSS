@@ -35,7 +35,11 @@
                                                         <span>{{ i.id }}. </span>
                                                     </td>
                                                     <td class="title">
-                                                        <input id = 'im' type='image' src="https://news.ycombinator.com/grayarrow2x.gif" width="11">&nbsp;<a href="{{ i.link }}" style="text-decoration: none; color: black;">{{ i.title }}</a> <span><a href="{% url 'reddit' %}">{{ i.category }}</a></span>
+                                                        <input id = 'im' type='image' src="https://news.ycombinator.com/grayarrow2x.gif" width="11">&nbsp;<a href="{{ i.link }}" style="text-decoration: none; color: black;">{{ i.title }}</a>
+                                                        <a href="{% url 'reddit' %}"><span class="tag" style="font-family:Verdana, Geneva, sans-serif; font-size:  9pt;
+       color:#ffffff; background-color:#222222; padding-top: 2px;
+       padding-bottom: 2px; padding-left: 5px; padding-right: 5px;
+       white-space: nowrap; border-radius: 5px;">{{ i.category }}</span></a>
                                                         <input name='feed_bookmark' type='hidden' value="bookmark" width="12" >
                                                     </td>
                                             </form>
