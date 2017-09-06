@@ -2,11 +2,44 @@ import tweepy
 import time
 import sqlite3
 import multiprocessing
-from rss_feed import multiprocess
+# from rss_feed import multiprocess
 
 ####################
 # Fetching Tweets with Multiprocessing
 ####################
+
+
+def dump_queue(result_queue):
+    li = []
+    while True:
+        if result_queue.get() == 'stop':
+            break
+        li.append(result_queue.get())
+    return li
+
+
+def multiprocess(items, target_function):
+    """
+    Multiprocessing Abstraction
+    """
+    work_queue = multiprocessing.Queue()
+    for feed in items:
+        work_queue.put(feed)
+
+    result_queue = multiprocessing.Queue()
+
+    workers = []
+    for i in range(len(items)):
+        worker = multiprocessing.Process(target=target_function, args=(work_queue, result_queue,))
+        worker.start()
+        workers.append(worker)
+
+    for w in workers:
+        w.join()
+
+    result_queue.put('stop')  # to indicate last element in queue... qsize isn't working
+    feed_list = dump_queue(result_queue)
+    return feed_list
 
 
 CONSUMER_KEY = 'DIVFNO658PjKMozopS1oLMOwo'
@@ -28,26 +61,62 @@ class UserTweets(object):
         self.api = tweepy.API(auth)
 
     def get_user_tweets(self, user_id):
-        tweet_info = [status.text for status in
-                      self.api.user_timeline(user_id, count=10)]
-        # w = [status.entities for status in self.api.user_timeline(user_id, count=10)]
+        # tweet_info = [status.text for status in
+        #               self.api.user_timeline(user_id, count=10)]
+        tweet_info = []
+        for status in self.api.user_timeline(user_id, count=10):
+            urls = status.entities['urls']
+            if len(urls) > 0:
+                for y in urls:
+                    tweet_info.append([status.text, y.get('url')])
+            else:
+                tweet_info.append([status.text])
         return tweet_info
+
+    def get_search_test(self, word):
+        search_result = []
+        for status in self.api.search(q=word, count=10):
+            urls = status.entities['urls']
+            if len(urls) > 0:
+                for y in urls:
+                    search_result.append([status.text, y.get('url')])
+            else:
+                search_result.append([status.text])
+        # search_results = [status.text for status in self.api.search(q=word, count=10)]
+        # return list(zip(search_results, url_list))
+        return search_result
 
     def get_search_tweets(self, work_queue, result_queue):
         while True:
-
             try:
                 word = work_queue.get(block=False,)
             except:
                 break
-            search_results = [status.text for status in self.api.search(q=word, count=10)]
-            result_queue.put(search_results)
+
+            search_result = []
+            for status in self.api.search(q=word, count=10):
+                urls = status.entities['urls']
+                if len(urls) > 0:
+                    for y in urls:
+                        search_result.append([status.text, y.get('url')])
+                else:
+                    search_result.append([status.text])
+
+            # search_results = [status.text for status in self.api.search(q=word, count=10)]
+            result_queue.put(search_result)
+
+
+# t = UserTweets()
+# search_results = t.get_search_test('smart')
+# for y in search_results:
+#     print(y)
 
 
 def execute_tweets():
     """
     """
-    start_time = time.time()
+    # start_time = time.time()
+    default = 'https://twitter.com/'
     conn = sqlite3.connect('/Users/Rahul/Desktop/Main/Side_projects/all_in_one/for_me/db.nonsense')
     c = conn.cursor()
     c.execute("SELECT * FROM app_file_tweet")
@@ -57,37 +126,75 @@ def execute_tweets():
         recent_primary_key = y[-1][0]
     else:
         recent_primary_key = 0
-    while True:
-        feeds = multiprocess(tweet_hit_list, t.get_search_tweets)
-        timeline = t.get_user_tweets('theduggal07')
-        for i in feeds:
-            i = [y for y in i if y != '\n']
-            ti = [i for i in timeline if i != '\n']
-            for y in range(len(i)):
-                recent_primary_key += 1
-                c.execute("INSERT INTO app_file_tweet VALUES (?, ?)", (recent_primary_key, i[y]))
+
+    feeds = multiprocess(tweet_hit_list, t.get_search_tweets)
+    timeline = t.get_user_tweets('theduggal07')
+    for i in feeds:
+        i = [y for y in i if y != '\n']
+        ti = [i for i in timeline if i != '\n']
+        for tweet in i:
+            recent_primary_key += 1
+            if len(tweet) > 1:
+                # c.execute("INSERT INTO app_file_tweet (id, tweet) VALUES (?, ?)", (recent_primary_key, tweet[0]))
+                # conn.commit()
+                # c.execute("INSERT INTO app_file_tweet (id, url) VALUES (?, ?)", (recent_primary_key, tweet[1]))
+                # conn.commit()
+                c.execute("INSERT INTO app_file_tweet (id, tweet, url) VALUES (?, ?, ?)",
+                          (recent_primary_key, tweet[0], tweet[1]))
                 conn.commit()
-                recent_primary_key += 1
-                c.execute("INSERT INTO app_file_tweet VALUES (?, ?)", (recent_primary_key, ti[y]))
+            else:
+                c.execute("INSERT INTO app_file_tweet (id, tweet, url) VALUES (?, ?, ?)", (recent_primary_key, tweet[0], default))
                 conn.commit()
-        #     for y in i:
-        #         recent_primary_key += 1
-        #         c.execute("INSERT INTO app_file_tweet VALUES (?, ?)", (recent_primary_key, y))
-        #         conn.commit()
-        print('Twitter Done')
-        time.sleep(60.0 - ((time.time() - start_time) % 60.0))
+        c.execute('SELECT MAX(Id) FROM app_file_tweet')
+        new_id = c.fetchone()[0]
+        recent_primary_key = new_id
+        for tweet in ti:
+            recent_primary_key += 1
+            if len(tweet) > 1:
+                c.execute("INSERT INTO app_file_tweet (id, tweet, url) VALUES (?, ?, ?)",
+                          (recent_primary_key, tweet[0], tweet[1]))
+                conn.commit()
+            else:
+                c.execute("INSERT INTO app_file_tweet (id, tweet, url) VALUES (?, ?, ?)",
+                          (recent_primary_key, tweet[0], default))
+                conn.commit()
+
+        # for y in range(len(i)):
+        #     recent_primary_key += 1
+        #     c.execute("INSERT INTO app_file_tweet VALUES (?, ?)", (recent_primary_key, i[y]))
+        #     conn.commit()
+        #     recent_primary_key += 1
+        #     c.execute("INSERT INTO app_file_tweet VALUES (?, ?)", (recent_primary_key, ti[y]))
+        #     conn.commit()
+    print('Twitter Done')
+
+    # time.sleep(60.0 - ((time.time() - start_time) % 60.0))
+
+
+# if __name__ == '__main__':
+#     execute_tweets()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # w = UserTweets()
 # l = w.get_user_tweets('theduggal07')
 # print(l)
-
-
-
-
-
-
-
-
 
 # if __name__ == '__main__':
 

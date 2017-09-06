@@ -81,7 +81,7 @@
                                                         <span>{{ i.id }}.  </span>
                                                     </td>
                                                     <td class="title">
-                                                        <input name='tweet_bookmark' type='image' src="https://news.ycombinator.com/grayarrow2x.gif" width="11"/>&nbsp;{{ i.tweet }}
+                                                        <input name='tweet_bookmark' type='image' src="https://news.ycombinator.com/grayarrow2x.gif" width="11"/>&nbsp;<a href="{{ i.url }}" style="text-decoration: none; color: black;">{{ i.tweet }}</a>
                                                         <input name='tweet_bookmark' type='hidden' value="bookmark" width="12" >
 
                                                     </td>

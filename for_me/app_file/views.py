@@ -9,6 +9,8 @@ from .rss_feed import add_url
 import json, requests
 from .forms import UrlForm, FeedBookMark, TweetBookMark
 from pprint import pprint
+from .brute_feed import feed_execute
+from .tweet_feed import execute_tweets
 
 
 def pag(a, request):
@@ -32,6 +34,11 @@ def home(request):
         url = request.POST.get('url')
         add_url(url, '/Users/Rahul/Desktop/Main/Side_projects/all_in_one/for_me/app_file/urls')
         messages.success(request, 'Form submission successful')
+
+    if request.method == 'GET' and 'refresh' in request.GET:
+        feed_execute()
+        execute_tweets()
+
     return render(request, 'te.html', {'object_list': pag(b, request)})
 
 

@@ -56,11 +56,20 @@
 {% extends 'base.html' %}
 {% block content %}
                                         <td style="text-align:right;padding-right:4px;">
+
+
+
                                             <span class="pagetop">
                                                 <form method="POST">
                                                     Url (Rss Format): <input type="text" name="url">{% csrf_token %}
                                                     <input type="submit" value="Submit" />
+
                                                 </form>
+
+                                                <form method="GET">
+                                                    <input name='refresh' type="submit" value="Refresh Feed" />
+                                                </form>
+
                                             </span>
                                         </td>
                                     </tr>

@@ -15,6 +15,7 @@ class Url(models.Model):
 
 class Tweet(models.Model):
     tweet = models.CharField(max_length=500)
+    url = models.CharField(max_length=500, default='https://twitter.com/')
 
 
 class BookMark(models.Model):

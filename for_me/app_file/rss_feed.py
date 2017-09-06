@@ -119,8 +119,8 @@ def feed_execute():
         time.sleep(60.0 - ((time.time() - start_time) % 60.0))
 
 
-# if __name__ == '__main__':
-#     feed_execute()
+if __name__ == '__main__':
+    feed_execute()
 
 
 
