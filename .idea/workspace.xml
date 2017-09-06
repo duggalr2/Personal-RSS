@@ -3,14 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1f6c7a18-e02b-4442-82ea-ea901599be0a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/for_me/db.nonsense" afterPath="$PROJECT_DIR$/for_me/db.nonsense" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/for_me/app_file/urls" afterPath="$PROJECT_DIR$/for_me/app_file/urls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/for_me/static/css/main.css" afterPath="$PROJECT_DIR$/for_me/static/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/for_me/templates/base.html" afterPath="$PROJECT_DIR$/for_me/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/for_me/templates/google.html" afterPath="$PROJECT_DIR$/for_me/templates/google.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/for_me/templates/hacker_news.html" afterPath="$PROJECT_DIR$/for_me/templates/hacker_news.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/for_me/templates/other.html" afterPath="$PROJECT_DIR$/for_me/templates/other.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/for_me/templates/python.html" afterPath="$PROJECT_DIR$/for_me/templates/python.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/for_me/templates/reddit.html" afterPath="$PROJECT_DIR$/for_me/templates/reddit.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/for_me/templates/te.html" afterPath="$PROJECT_DIR$/for_me/templates/te.html" />
     </list>
     <ignored path="all_in_one.iws" />
@@ -37,7 +29,30 @@
     <favorites_list name="all_in_one" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/for_me/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="318">
+              <caret line="108" column="21" selection-start-line="108" selection-start-column="21" selection-end-line="108" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="te.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/for_me/templates/te.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="546">
+              <caret line="152" column="0" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#td#1;n#tr#0;n#form#0;n#tbody#0;n#table#0;n#td#0;n#tr#1;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -62,13 +77,13 @@
         <option value="$PROJECT_DIR$/for_me/for_me/urls.py" />
         <option value="$PROJECT_DIR$/for_me/templates/base.html" />
         <option value="$PROJECT_DIR$/for_me/static/css/main.css" />
-        <option value="$PROJECT_DIR$/for_me/templates/te.html" />
         <option value="$PROJECT_DIR$/for_me/templates/google.html" />
         <option value="$PROJECT_DIR$/for_me/templates/hacker_news.html" />
         <option value="$PROJECT_DIR$/for_me/templates/other.html" />
         <option value="$PROJECT_DIR$/for_me/templates/python.html" />
         <option value="$PROJECT_DIR$/for_me/templates/reddit.html" />
         <option value="$PROJECT_DIR$/for_me/app_file/urls" />
+        <option value="$PROJECT_DIR$/for_me/templates/te.html" />
       </list>
     </option>
   </component>
@@ -582,9 +597,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26171243" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26171243" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -816,13 +831,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/for_me/templates/twitter.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="83" column="233" selection-start-line="83" selection-start-column="233" selection-end-line="83" selection-end-column="233" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/for_me/app_file/tweet_feed.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -840,13 +848,6 @@
             <marker date="1504202922000" expanded="true" signature="5590:5630" ph="INSERT INTO app_file_tweet... " />
             <marker date="1504202922000" expanded="true" signature="5752:5792" ph="INSERT INTO app_file_tweet... " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/for_me/app_file/twitter_search_words">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -870,14 +871,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/for_me/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="47" column="62" selection-start-line="47" selection-start-column="62" selection-end-line="47" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/for_me/templates/google.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="498">
@@ -891,7 +884,7 @@
         <state relative-caret-position="393">
           <caret line="40" column="56" selection-start-line="40" selection-start-column="56" selection-end-line="43" selection-end-column="76" />
           <folding>
-            <element signature="e#2403#2649#0#HTML" expanded="true" />
+            <element signature="e#2403#2649#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -912,20 +905,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/for_me/app_file/urls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/for_me/templates/reddit.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
           <folding>
-            <element signature="e#2274#2520#0#HTML" expanded="true" />
+            <element signature="e#2274#2520#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -935,20 +920,6 @@
         <state relative-caret-position="120">
           <caret line="8" column="49" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="49" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/for_me/templates/te.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="101" column="7" selection-start-line="101" selection-start-column="7" selection-end-line="104" selection-end-column="76" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#a#1;n#td#1;n#tr#0;n#form#0;n#tbody#0;n#table#0;n#td#0;n#tr#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#a#2;n#td#1;n#tr#0;n#form#0;n#tbody#0;n#table#0;n#td#0;n#tr#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#a#3;n#td#1;n#tr#0;n#form#0;n#tbody#0;n#table#0;n#td#0;n#tr#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#a#4;n#td#1;n#tr#0;n#form#0;n#tbody#0;n#table#0;n#td#0;n#tr#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#a#5;n#td#1;n#tr#0;n#form#0;n#tbody#0;n#table#0;n#td#0;n#tr#1;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -991,6 +962,48 @@
           <folding>
             <element signature="e#0#22#0" expanded="true" />
             <marker date="1504124675000" expanded="true" signature="3025:3053" ph="SELECT * FRO... app_file_feeds" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/for_me/app_file/twitter_search_words">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/for_me/app_file/urls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/for_me/templates/twitter.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="83" column="233" selection-start-line="83" selection-start-column="233" selection-end-line="83" selection-end-column="233" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/for_me/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="108" column="21" selection-start-line="108" selection-start-column="21" selection-end-line="108" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/for_me/templates/te.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="152" column="0" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#td#1;n#tr#0;n#form#0;n#tbody#0;n#table#0;n#td#0;n#tr#1;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

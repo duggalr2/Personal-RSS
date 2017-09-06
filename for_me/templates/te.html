@@ -90,7 +90,7 @@
                                                         <span>{{ i.id }}. </span>
                                                     </td>
                                                     <td class="title">
-                                                        <input id = 'im' type='image' src="https://news.ycombinator.com/grayarrow2x.gif" width="11">&nbsp;<a href="{{ i.link }}" style="text-decoration: none; color: black;">{{ i.title }}</a>
+                                                        <input id = 'im' type='image' src="https://news.ycombinator.com/grayarrow2x.gif" width="11">&nbsp;<a href="{{ i.link }}" id="headline"  style="text-decoration: none; color: black;">{{ i.title }}</a>
                                                             {% if i.category == 'Google' %}
                                                                 <a href="{% url 'google' %}"><span class="tag" style="font-family:Verdana, Geneva, sans-serif; font-size:  9pt;
        color:#ffffff; background-color:#222222; padding-top: 2px;
@@ -135,7 +135,29 @@
                                             </tr>
                                             <tr style="height:5px"></tr>
                                         {% endfor %}
+
+
+<script>
+
+    var Anchors = document.getElementsByTagName('a');
+
+    for (var i = 0; i < Anchors.length; i++) {
+        document.addEventListener('click', function(e) {
+            e = e || window.event;
+            var target = e.target || e.srcElement,
+            text = target.textContent || text.innerText;
+
+        }, false);
+    }
+
+
+</script>
+
+
 {% endblock %}
+
+
+
 
 
 
