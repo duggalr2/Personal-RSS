@@ -139,16 +139,46 @@
 
 <script>
 
-    var Anchors = document.getElementsByTagName('a');
 
-    for (var i = 0; i < Anchors.length; i++) {
-        document.addEventListener('click', function(e) {
+
+
+
+{#    var Anchors = document.getElementsByTagName('a');#}
+    var text = '';
+    document.addEventListener('click', function(e) {
             e = e || window.event;
-            var target = e.target || e.srcElement,
+            var target = e.target || e.srcElement;
             text = target.textContent || text.innerText;
-
+            console.log(text);
+            updatePieFact(text)
         }, false);
-    }
+
+
+    function updatePieFact(p){
+        var URL = "{% url 'home' %}";
+        var data = {'pieFact': p};
+            $.post(URL, data, function(response){
+                if(response === 'success'){
+                    console.log('nice');
+                }
+                else{ console.log('Error! :('); }
+            });
+        }
+
+
+
+{#    var Anchors = document.getElementsByTagName('a');#}
+{#    var text = '';#}
+{#    for (var i = 0; i < Anchors.length; i++) {#}
+{#        document.addEventListener('click', function(e) {#}
+{#            e = e || window.event;#}
+{#            var target = e.target || e.srcElement;#}
+{#            text = target.textContent || text.innerText;#}
+{#        }, false);#}
+{#    }#}
+{#    console.log(text)#}
+{#    updatePieFact(text)#}
+
 
 
 </script>

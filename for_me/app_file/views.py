@@ -11,6 +11,8 @@ from .forms import UrlForm, FeedBookMark, TweetBookMark
 from pprint import pprint
 from .brute_feed import feed_execute
 from .tweet_feed import execute_tweets
+from django.views.decorators.csrf import csrf_exempt
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 
 def pag(a, request):
@@ -27,6 +29,22 @@ def pag(a, request):
     return blog_post
 
 
+def similarity(new_header):
+    filepath = '/Users/Rahul/Desktop/Main/Side_projects/all_in_one/for_me/app_file/track_headers'
+    f = open(filepath)
+    lines = f.readlines()
+    lines = [line.replace('\n', '') for line in lines]
+    vect = TfidfVectorizer(min_df=1)
+    scores = []
+    for line in lines:
+        tfidf = vect.fit_transform([line, new_header])
+        cosine_similarity = (tfidf * tfidf.T).A[0,1]
+        scores.append(cosine_similarity)
+    scores.sort(reverse=True)
+    return scores[0]
+
+
+@csrf_exempt
 def home(request):
     """Main Page"""
     b = Feeds.objects.all().order_by('-pk')
@@ -36,8 +54,17 @@ def home(request):
         messages.success(request, 'Form submission successful')
 
     if request.method == 'GET' and 'refresh' in request.GET:
-        feed_execute()
+        recommend_id = feed_execute()
         execute_tweets()
+        print(recommend_id)
+
+
+    if request.method == 'POST' and 'pieFact' in request.POST:
+        header = request.POST['pieFact']
+        if header != 'More': # TODO: remove newsfeed, etc. as well
+            with open('/Users/Rahul/Desktop/Main/Side_projects/all_in_one/for_me/app_file/track_headers', 'a') as f:
+                f.write(header + '\n')
+        return HttpResponse('success')
 
     return render(request, 'te.html', {'object_list': pag(b, request)})
 

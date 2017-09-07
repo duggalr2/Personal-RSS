@@ -1,7 +1,7 @@
 import time
 import sqlite3
 import feedparser
-
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 f = open('/Users/Rahul/Desktop/Main/Side_projects/all_in_one/for_me/app_file/urls')
 hit_list = [i.replace('\n', '') for i in f.readlines()]
@@ -41,6 +41,21 @@ def parse_feed(items):
     return result, category_list
 
 
+def similarity(new_header):
+    filepath = '/Users/Rahul/Desktop/Main/Side_projects/all_in_one/for_me/app_file/track_headers'
+    f = open(filepath)
+    lines = f.readlines()
+    lines = [line.replace('\n', '') for line in lines]
+    vect = TfidfVectorizer(min_df=1)
+    scores = []
+    for line in lines:
+        tfidf = vect.fit_transform([line, new_header])
+        cosine_similarity = (tfidf * tfidf.T).A[0,1]
+        scores.append(cosine_similarity)
+    scores.sort(reverse=True)
+    return scores[0]
+
+
 def feed_execute():
     """
     """
@@ -55,17 +70,21 @@ def feed_execute():
         recent_primary_key = 0
 
     feeds, category_list = parse_feed(hit_list)
-    print(len(category_list), len(feeds))
+    recommend_id = []
+    # print(len(category_list), len(feeds))
     for number in range(len(feeds)):
         recent_primary_key += 1
         title = feeds[number][0]
         link = feeds[number][-1]
         category = category_list[number]
+        score = similarity(title)
+        if score > 0.5:
+            recommend_id.append(recent_primary_key)
         c.execute("INSERT INTO app_file_feeds VALUES (?, ?, ?, ?)",
                   (recent_primary_key, title, link, category))
         conn.commit()
     print('RSS Done')
-
+    return recommend_id
     # for i in feeds:
     #     recent_primary_key += 1
     #     title = i[0]
@@ -79,3 +98,9 @@ def feed_execute():
 
 # feed_execute()
 
+
+
+
+
+
+# similarity('python is amazing, machine learning, artificial intelligence, computer')
