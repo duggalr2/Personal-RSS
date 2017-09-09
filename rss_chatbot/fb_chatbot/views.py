@@ -15,7 +15,7 @@ import sqlite3
 def post_facebook_message(fbid, recevied_message):
     post_message_url = 'https://graph.facebook.com/v2.6/me/messages?access_token=EAACBLgSkT6MBAFPCVH4fIsASNNnH22iXWZAWqn5QBo99jhE402Ap5O4EZBlJ61mgv3uzScpKs1Dhn8c9Oop7SKMT2z8YjXeQujRTSlkwSKa7pin2BlJzxcJb94q4486G19CX7lR47wSbfkW6rcPyZAisJiv3Tne7RuH9ccuORlKdvCQL2Es'
     response_msg = json.dumps({"recipient":{"id":fbid}, "message":{"text":recevied_message}})
-    status = requests.post(post_message_url, headers={"Content-Type": "application/json"},data=response_msg)
+    status = requests.post(post_message_url, headers={"Content-Type": "application/json"}, data=response_msg)
     pprint(status.json())
 
 
@@ -101,6 +101,6 @@ class Rss_view(generic.View):
                             m = title + ', ' + url
                             post_facebook_message(message['sender']['id'], m)
                     else:
-                        post_facebook_message(message['sender']['id'], message['message']['text'])
+                        post_facebook_message(message['sender']['id'], 'Do one of these commands: latest, hacker_news, reddit, python, google, other')
         return HttpResponse()
 
