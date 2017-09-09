@@ -44,6 +44,17 @@ def similarity(new_header):
     return scores[0]
 
 
+# def recommend_page(request):
+#     big_list = []
+#     if request.method == 'GET' and 'refresh' in request.GET:
+#         recommend_id = feed_execute()
+#         # execute_tweets()
+#         for id in recommend_id:
+#             b = Feeds.objects.get(id=id)
+#             big_list.append(b)
+#     return render(request, 'recommend_page.html', {'object_list': pag(big_list, request)})
+
+
 @csrf_exempt
 def home(request):
     """Main Page"""
@@ -56,8 +67,7 @@ def home(request):
     if request.method == 'GET' and 'refresh' in request.GET:
         recommend_id = feed_execute()
         execute_tweets()
-        print(recommend_id)
-
+        # print(recommend_id)
 
     if request.method == 'POST' and 'pieFact' in request.POST:
         header = request.POST['pieFact']

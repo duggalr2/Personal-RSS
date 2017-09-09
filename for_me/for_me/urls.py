@@ -19,6 +19,7 @@ from app_file import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    # url(r'^recommend_page/', views.recommend_page, name='recommend_page'),
     url(r'^home/', views.home, name='home'),
     url(r'^reddit/', views.reddit, name='reddit'),
     url(r'^google/', views.google, name='google'),

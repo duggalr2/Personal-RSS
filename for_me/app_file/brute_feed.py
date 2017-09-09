@@ -77,9 +77,9 @@ def feed_execute():
         title = feeds[number][0]
         link = feeds[number][-1]
         category = category_list[number]
-        score = similarity(title)
-        if score > 0.5:
-            recommend_id.append(recent_primary_key)
+        # score = similarity(title)
+        # if score > 0.08:
+        #     recommend_id.append(recent_primary_key)
         c.execute("INSERT INTO app_file_feeds VALUES (?, ?, ?, ?)",
                   (recent_primary_key, title, link, category))
         conn.commit()
