@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1f6c7a18-e02b-4442-82ea-ea901599be0a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/for_me/app_file/tweet_feed.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/for_me/db.nonsense" afterPath="$PROJECT_DIR$/for_me/db.nonsense" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/all_in_one.iml" afterPath="$PROJECT_DIR$/.idea/all_in_one.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/for_me/app_file/main.py" afterPath="$PROJECT_DIR$/for_me/app_file/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/for_me/app_file/rss_feed.py" afterPath="$PROJECT_DIR$/for_me/app_file/rss_feed.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/for_me/app_file/track_headers" afterPath="$PROJECT_DIR$/for_me/app_file/track_headers" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/for_me/app_file/views.py" afterPath="$PROJECT_DIR$/for_me/app_file/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/for_me/for_me/settings.py" afterPath="$PROJECT_DIR$/for_me/for_me/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/for_me/templates/te.html" afterPath="$PROJECT_DIR$/for_me/templates/te.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rss_chatbot/fb_chatbot/views.py" afterPath="$PROJECT_DIR$/rss_chatbot/fb_chatbot/views.py" />
-    </list>
+    <list default="true" id="1f6c7a18-e02b-4442-82ea-ea901599be0a" name="Default" comment="" />
     <ignored path="all_in_one.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -41,26 +29,7 @@
     <favorites_list name="all_in_one" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/rss_chatbot/fb_chatbot/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="118" column="77" selection-start-line="118" selection-start-column="77" selection-end-line="118" selection-end-column="77" />
-              <folding>
-                <element signature="e#121#154#0" expanded="true" />
-                <marker date="1505334617000" expanded="true" signature="2588:2616" ph="SELECT * FRO... app_file_feeds" />
-                <marker date="1505334617000" expanded="true" signature="3080:3137" ph="SELECT * FRO... app_file_feeds" />
-                <marker date="1505334617000" expanded="true" signature="3598:3650" ph="SELECT * FRO... app_file_feeds" />
-                <marker date="1505334617000" expanded="true" signature="4111:4163" ph="SELECT * FRO... app_file_feeds" />
-                <marker date="1505334617000" expanded="true" signature="4624:4676" ph="SELECT * FRO... app_file_feeds" />
-                <marker date="1505334617000" expanded="true" signature="5565:5616" ph="SELECT * FRO... app_file_feeds" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -154,38 +123,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="all_in_one" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="all_in_one" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="all_in_one" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rss_chatbot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="all_in_one" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="all_in_one" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rss_chatbot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fb_chatbot" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -576,9 +513,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20436187" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20436187" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1029,8 +966,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rss_chatbot/fb_chatbot/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="118" column="77" selection-start-line="118" selection-start-column="77" selection-end-line="118" selection-end-column="77" />
+        <state relative-caret-position="492">
+          <caret line="113" column="51" selection-start-line="113" selection-start-column="51" selection-end-line="113" selection-end-column="51" />
           <folding>
             <element signature="e#121#154#0" expanded="true" />
             <marker date="1505334617000" expanded="true" signature="2588:2616" ph="SELECT * FRO... app_file_feeds" />
