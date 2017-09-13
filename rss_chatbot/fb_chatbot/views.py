@@ -10,6 +10,13 @@ from django.http.response import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 import sqlite3
+from django.views.decorators.cache import cache_page
+
+import multiprocessing
+# from for_me.app_file.etweet_feed import execute_tweets
+# from for_me.app_file.enew_rss import run_it
+from .etweet_feed import execute_tweets
+from .enew_rss import run_it
 
 
 def post_facebook_message(fbid, recevied_message):
@@ -91,6 +98,16 @@ class Rss_view(generic.View):
                             url = y[2]
                             m = title + ', ' + url
                             post_facebook_message(message['sender']['id'], m)
+
+                    elif message['message']['text'] == 'refresh':
+                        p1 = multiprocessing.Process(target=run_it)
+                        p2 = multiprocessing.Process(target=execute_tweets)
+                        p1.start()
+                        p2.start()
+                        p1.join()
+                        p2.join()
+                        post_facebook_message(message['sender']['id'], 'Done')
+
                     elif message['message']['text'] == 'other':
                         c.execute("SELECT * FROM app_file_feeds WHERE category='Other'")
                         y = c.fetchall()
@@ -101,6 +118,6 @@ class Rss_view(generic.View):
                             m = title + ', ' + url
                             post_facebook_message(message['sender']['id'], m)
                     else:
-                        post_facebook_message(message['sender']['id'], 'Do one of these commands: latest, hacker_news, reddit, python, google, other')
+                        post_facebook_message(message['sender']['id'], 'Do one of these commands: refresh, latest, hacker_news, reddit, python, google, other')
         return HttpResponse()
 

@@ -8,29 +8,6 @@ import feedparser
 # RSS Feed Parser with multiprocessing
 ##########################################
 
-# Priority:
-        # TODO: Now there is no more hit list.. so need to update everything and change it to file!
-        # TODO: Functions (these are just some I can think of rn..):
-            # - add_url and create form on django, etc..
-    # TODO: HAVE TWITTER FEED IN THERE!
-    # TODO: Start the feed and test out all the functions before continuing...
-    # TODO: After all functions is tested, start the feed and have it running throughout the rest!
-    # TODO: Add Pagination
-    # TODO: Fix the entire UI, build it similar to HN
-    # TODO: Add Bookmarking
-    # TODO: REFRESH FUNCTION: For refresh: restart execute()
-    # TODO: Build the daily reminder Chatbot and Get top 10 articles Chatbot --> Render it to Django (reminder one)
-    # TODO: Filtering and Categorization
-
-########################
-    # TODO: Filtering and Categorization
-    # TODO: The graph of categories (or categories section) should be on site
-    # TODO: Build a Filtering algorithm to avoid overpopulation of links!
-########################
-
-########################
-
-########################
 
 # AFTER EVERYTHING IS DONE:
     # TODO: Add docstrings

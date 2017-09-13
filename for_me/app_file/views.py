@@ -6,13 +6,17 @@ from django.utils.decorators import method_decorator
 from django.views import generic
 from .models import Feeds, Tweet, BookMark
 from .rss_feed import add_url
+from .enew_rss import run_it
+# from .main import main_run
+import multiprocessing
 import json, requests
 from .forms import UrlForm, FeedBookMark, TweetBookMark
 from pprint import pprint
 from .brute_feed import feed_execute
-from .tweet_feed import execute_tweets
+from .etweet_feed import execute_tweets
 from django.views.decorators.csrf import csrf_exempt
 from sklearn.feature_extraction.text import TfidfVectorizer
+from django.views.decorators.cache import cache_page
 
 
 def pag(a, request):
@@ -55,6 +59,7 @@ def similarity(new_header):
 #     return render(request, 'recommend_page.html', {'object_list': pag(big_list, request)})
 
 
+# @cache_page(60 * 10)
 @csrf_exempt
 def home(request):
     """Main Page"""
@@ -65,9 +70,16 @@ def home(request):
         messages.success(request, 'Form submission successful')
 
     if request.method == 'GET' and 'refresh' in request.GET:
-        recommend_id = feed_execute()
-        execute_tweets()
-        # print(recommend_id)
+        p1 = multiprocessing.Process(target=run_it)
+        p2 = multiprocessing.Process(target=execute_tweets)
+        p1.start()
+        p2.start()
+        p1.join()
+        p2.join()
+
+        # run_it()
+        # # recommend_id = feed_execute()
+        # execute_tweets()
 
     if request.method == 'POST' and 'pieFact' in request.POST:
         header = request.POST['pieFact']

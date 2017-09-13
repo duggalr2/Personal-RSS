@@ -52,11 +52,13 @@
 {#                                            </span>#}
 {#                                        </td>#}
 
-
 {% extends 'base.html' %}
+{% load cache %}
+{% cache 500 content %}
 {% block content %}
                                         <td style="text-align:right;padding-right:4px;">
 
+                                            {% now "jS F Y H:i" %}
 
 
                                             <span class="pagetop">
@@ -185,6 +187,7 @@
 
 
 {% endblock %}
+{% endcache %}
 
 
 
