@@ -1,18 +1,11 @@
 from django.contrib import messages
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render, HttpResponseRedirect, HttpResponse, get_object_or_404, redirect
-from django.views.decorators.csrf import csrf_exempt
-from django.utils.decorators import method_decorator
-from django.views import generic
 from .models import Feeds, Tweet, BookMark
 from .rss_feed import add_url
 from .enew_rss import run_it
-# from .main import main_run
 import multiprocessing
-import json, requests
 from .forms import UrlForm, FeedBookMark, TweetBookMark
-from pprint import pprint
-from .brute_feed import feed_execute
 from .etweet_feed import execute_tweets
 from django.views.decorators.csrf import csrf_exempt
 from sklearn.feature_extraction.text import TfidfVectorizer
