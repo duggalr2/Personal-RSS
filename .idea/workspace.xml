@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f6c7a18-e02b-4442-82ea-ea901599be0a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/for_me/summarize.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/for_me/db.nonsense" afterPath="$PROJECT_DIR$/for_me/db.nonsense" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/for_me/app_file/views.py" afterPath="$PROJECT_DIR$/for_me/app_file/views.py" />
     </list>
     <ignored path="all_in_one.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,8 +39,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/for_me/app_file/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
-              <caret line="148" column="40" selection-start-line="148" selection-start-column="40" selection-end-line="148" selection-end-column="40" />
+            <state relative-caret-position="252">
+              <caret line="72" column="21" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="21" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -920,8 +918,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/for_me/app_file/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="148" column="40" selection-start-line="148" selection-start-column="40" selection-end-line="148" selection-end-column="40" />
+        <state relative-caret-position="252">
+          <caret line="72" column="21" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="21" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
