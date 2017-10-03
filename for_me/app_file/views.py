@@ -143,7 +143,10 @@ def bookmark(request, new_id):
         if form.is_valid():
             b = BookMark.objects.create(title=instance.title, link=instance.link)
             b.save()
-            return redirect('home')
+            # print(request.path)
+            previous_url = request.META.get('HTTP_REFERER')
+            # return HttpResponseRedirect()
+            return redirect(previous_url)
 
     elif request.method == 'GET' and 'tweet_bookmark' in request.GET:
         instance = get_object_or_404(Tweet, id=new_id)
