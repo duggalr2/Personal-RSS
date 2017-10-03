@@ -3,3 +3,4 @@ Personal RSS/Twitter Feed with multiprocessing, similar HN UI, with a complement
 https://raw.github.com/{USERNAME}/{REPOSITORY}/{BRANCH}/{PATH}
 https://raw.github.com/ryanmaxwell/iArrived/master/Screenshots/Settings.png
 https://github.com/duggalr2/Personal-RSS/master/homepage.png
+https://github.com/duggalr2/Personal-RSS/blob/master/homepage.png
