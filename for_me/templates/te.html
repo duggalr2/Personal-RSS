@@ -68,7 +68,13 @@
 
                                                 </form>
 
-                                                <form method="GET">
+                                                <form method="POST">
+                                                    Search: <input type="text" name="search">{% csrf_token %}
+                                                    <input type="submit" value="Submit" />
+
+                                                </form>
+
+                                                <form method="POST">
                                                     <input name='refresh' type="submit" value="Refresh Feed" />
                                                 </form>
 

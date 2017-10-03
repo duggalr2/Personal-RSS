@@ -41,15 +41,17 @@
                                                     <a href="{% url 'home' %}" style="text-decoration: none;">News Feed</a>
                                                     |
                                                 </b>
-                                                <b class="twitter">
-                                                    <a href="{% url 'twitter' %}" style="text-decoration: none;">Twitter</a>
-                                                    |
-                                                </b>
+{#                                                <b class="twitter">#}
+{#                                                    <a href="{% url 'twitter' %}" style="text-decoration: none;">Twitter</a>#}
+{#                                                    |#}
+{#                                                </b>#}
                                                 <b class="bookmarks">
                                                     <a href="{% url 'bookmark' %}" style="text-decoration: none;">Bookmarks</a>
-
+                                                    |
                                                 </b>
-
+                                                <b class="feature">
+                                                    <a href="{% url 'feature' %}" style="text-decoration: none;">Feature</a>
+                                                </b>
                                             </span>
                                         </td>
                                             {% block content %}

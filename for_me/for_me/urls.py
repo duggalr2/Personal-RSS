@@ -26,7 +26,9 @@ urlpatterns = [
     url(r'^hn/', views.hacker_news, name='hacker_news'),
     url(r'^python/', views.python, name='python'),
     url(r'^other/', views.other, name='other'),
-    url(r'^tweets/', views.twitter, name='twitter'),
+    # url(r'^tweets/', views.twitter, name='twitter'),
     url(r'^(?P<new_id>\d+)/feedbm/$', views.bookmark, name='feed_bookmark'),
     url(r'^bookmark/', views.bookmark_page, name='bookmark'),
+    url(r'^feature/', views.feature_list, name='feature'),
+    url(r'^(?P<id>\d+)/delete/$', views.delete_feature, name='delete_feature'),
 ]

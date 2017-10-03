@@ -24,5 +24,9 @@ class BookMark(models.Model):
     link = models.URLField(blank=True)
 
 
+class Feature(models.Model):
+    feature = models.CharField(max_length=500)
+
+
 # class ArticleSummary(models.Model):
 #     summary = models.CharField(max_length=)

@@ -3,7 +3,7 @@ import feedparser
 import sqlite3
 
 
-f = open('/Users/Rahul/Desktop/Main/Side_projects/all_in_one/for_me/app_file/urls')
+f = open('/Users/Rahul/Desktop/Side_projects/all_in_one/for_me/app_file/urls')
 hit_list = [i.replace('\n', '') for i in f.readlines()]
 
 
@@ -35,11 +35,17 @@ def parse_feed(feed_url):
 def feed_execute(parsed_feed):
     """
     """
-
-    conn = sqlite3.connect('/Users/Rahul/Desktop/Main/Side_projects/all_in_one/for_me/db.nonsense')
+    conn = sqlite3.connect('/Users/Rahul/Desktop/Side_projects/all_in_one/for_me/db.nonsense')
     c = conn.cursor()
     c.execute('SELECT * FROM app_file_feeds WHERE id = (SELECT MAX(id) FROM app_file_feeds);')
-    recent_primary_key = c.fetchone()[0]
+    recent_primary_key = c.fetchone()
+    if recent_primary_key is None:
+        recent_primary_key = 1
+    else:
+        recent_primary_key = recent_primary_key[0]
+    if recent_primary_key >= 800:
+        c.execute("DELETE FROM app_file_feeds")
+        conn.commit()
     for number in range(len(parsed_feed)):
         recent_primary_key += 1
         title = parsed_feed[number][0]
@@ -64,3 +70,4 @@ def run_it():
 #     results = pool.map(parse_feed, hit_list)
 #     for result in results:
 #         feed_execute(result)
+# feed_execute(parse_feed(hit_list[0]))

@@ -19,7 +19,7 @@ import sqlite3
 
 def get_all_keyWords():
     """Get all the keywords for the first 10000 articles in the database """
-    conn = sqlite3.connect('/Users/Rahul/Desktop/Main/Side_projects/all_in_one/for_me/db.nonsense')
+    conn = sqlite3.connect('/Users/Rahul/Desktop/Side_projects/all_in_one/for_me/db.nonsense')
     c = conn.cursor()
     c.execute("SELECT link FROM app_file_feeds")
     links = c.fetchall()

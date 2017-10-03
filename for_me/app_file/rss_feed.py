@@ -14,7 +14,7 @@ import feedparser
     # TODO: Optimize this and get the complexity!
 
 
-f = open('/Users/Rahul/Desktop/Main/Side_projects/all_in_one/for_me/app_file/urls')
+f = open('/Users/Rahul/Desktop/Side_projects/all_in_one/for_me/app_file/urls')
 hit_list = [i.replace('\n', '') for i in f.readlines()]
 
 
@@ -75,7 +75,7 @@ def feed_execute():
     """
     """
     start_time = time.time()
-    conn = sqlite3.connect('/Users/Rahul/Desktop/Main/Side_projects/all_in_one/for_me/db.nonsense')
+    conn = sqlite3.connect('/Users/Rahul/Desktop/Side_projects/all_in_one/for_me/db.nonsense')
     c = conn.cursor()
     c.execute("SELECT * FROM app_file_feeds")
     y = c.fetchall()

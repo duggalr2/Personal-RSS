@@ -3,7 +3,7 @@ import sqlite3
 import feedparser
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-f = open('/Users/Rahul/Desktop/Main/Side_projects/all_in_one/for_me/app_file/urls')
+f = open('/Users/Rahul/Desktop/Side_projects/all_in_one/for_me/app_file/urls')
 hit_list = [i.replace('\n', '') for i in f.readlines()]
 # for url in hit_list:
 #     print(url)
@@ -42,7 +42,7 @@ def parse_feed(items):
 
 
 def similarity(new_header):
-    filepath = '/Users/Rahul/Desktop/Main/Side_projects/all_in_one/for_me/app_file/track_headers'
+    filepath = '/Users/Rahul/Desktop/Side_projects/all_in_one/for_me/app_file/track_headers'
     f = open(filepath)
     lines = f.readlines()
     lines = [line.replace('\n', '') for line in lines]
@@ -60,7 +60,7 @@ def feed_execute():
     """
     """
     start_time = time.time()
-    conn = sqlite3.connect('/Users/Rahul/Desktop/Main/Side_projects/all_in_one/for_me/db.nonsense')
+    conn = sqlite3.connect('/Users/Rahul/Desktop/Side_projects/all_in_one/for_me/db.nonsense')
     c = conn.cursor()
     c.execute("SELECT * FROM app_file_feeds")
     y = c.fetchall()

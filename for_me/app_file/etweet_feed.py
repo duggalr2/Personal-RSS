@@ -47,7 +47,7 @@ CONSUMER_SECRET = 'f8f8waBmcifaoiz0ohfwDMG3YPq0qnKzOL4aSRGBUb3JR2wc6g'
 ACCESS_TOKEN = '1536654752-A4oOpKBfNjz0hOlRd0vl7y8DHKN5RlUORpcT0CM'
 ACCESS_SECRET = 'yw5HYPaqt7C87jw8lQ1AFH7u9kfYYZL1prRd52YREFvFD'
 
-f = open('/Users/Rahul/Desktop/Main/Side_projects/all_in_one/for_me/app_file/twitter_search_words')
+f = open('/Users/Rahul/Desktop/Side_projects/all_in_one/for_me/app_file/twitter_search_words')
 tweet_hit_list = [line.replace('\n', '') for line in f.readlines()]
 
 
@@ -117,7 +117,7 @@ def execute_tweets():
     """
     # start_time = time.time()
     default = 'https://twitter.com/'
-    conn = sqlite3.connect('/Users/Rahul/Desktop/Main/Side_projects/all_in_one/for_me/db.nonsense')
+    conn = sqlite3.connect('/Users/Rahul/Desktop/Side_projects/all_in_one/for_me/db.nonsense')
     c = conn.cursor()
     c.execute("SELECT * FROM app_file_tweet")
     y = c.fetchall()

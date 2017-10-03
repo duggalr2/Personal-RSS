@@ -1,5 +1,5 @@
 from django import forms
-from .models import Url, Feeds, Tweet
+from .models import Url, Feeds, Tweet, Feature
 
 
 class UrlForm(forms.ModelForm):
@@ -22,3 +22,7 @@ class TweetBookMark(forms.ModelForm):
         fields = []
 
 
+class FeatureForm(forms.ModelForm):
+    class Meta:
+        model = Feature
+        fields = ['feature']

@@ -1,11 +1,11 @@
 from django.contrib import messages
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render, HttpResponseRedirect, HttpResponse, get_object_or_404, redirect
-from .models import Feeds, Tweet, BookMark
+from .models import Feeds, Tweet, BookMark, Feature
 from .rss_feed import add_url
 from .enew_rss import run_it
 import multiprocessing
-from .forms import UrlForm, FeedBookMark, TweetBookMark
+from .forms import UrlForm, FeedBookMark, TweetBookMark, FeatureForm
 from .etweet_feed import execute_tweets
 from django.views.decorators.csrf import csrf_exempt
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -27,7 +27,7 @@ def pag(a, request):
 
 
 def similarity(new_header):
-    filepath = '/Users/Rahul/Desktop/Main/Side_projects/all_in_one/for_me/app_file/track_headers'
+    filepath = '/Users/Rahul/Desktop/Side_projects/all_in_one/for_me/app_file/track_headers'
     f = open(filepath)
     lines = f.readlines()
     lines = [line.replace('\n', '') for line in lines]
@@ -41,47 +41,64 @@ def similarity(new_header):
     return scores[0]
 
 
-# def recommend_page(request):
-#     big_list = []
-#     if request.method == 'GET' and 'refresh' in request.GET:
-#         recommend_id = feed_execute()
-#         # execute_tweets()
-#         for id in recommend_id:
-#             b = Feeds.objects.get(id=id)
-#             big_list.append(b)
-#     return render(request, 'recommend_page.html', {'object_list': pag(big_list, request)})
-
-
 # @cache_page(60 * 10)
 @csrf_exempt
 def home(request):
-    """Main Page"""
     b = Feeds.objects.all().order_by('-pk')
     if request.POST.get('url'):
         url = request.POST.get('url')
-        add_url(url, '/Users/Rahul/Desktop/Main/Side_projects/all_in_one/for_me/app_file/urls')
+        add_url(url, '/Users/Rahul/Desktop/Side_projects/all_in_one/for_me/app_file/urls')
         messages.success(request, 'Form submission successful')
 
-    if request.method == 'GET' and 'refresh' in request.GET:
-        p1 = multiprocessing.Process(target=run_it)
-        p2 = multiprocessing.Process(target=execute_tweets)
-        p1.start()
-        p2.start()
-        p1.join()
-        p2.join()
+    if request.method == 'POST' and 'refresh' in request.POST:
+        run_it()
+        return render(request, 'te.html', {'object_list': pag(b, request)})
+
+    if request.POST.get('search'):
+        search_word = request.POST.get('search')
+        object_list = Feeds.objects.filter(title__contains=search_word)
+        return render(request, 'te.html', {'object_list': pag(object_list, request)})
+
+
+        # return render(request, 'te.html')
+        # return render(request, 'te.html')
+        # p1 = multiprocessing.Process(target=run_it)
+        # p2 = multiprocessing.Process(target=execute_tweets)
+        # p1.start()
+        # p2.start()
+        # p1.join()
+        # p2.join()
 
         # run_it()
         # # recommend_id = feed_execute()
         # execute_tweets()
 
-    if request.method == 'POST' and 'pieFact' in request.POST:
-        header = request.POST['pieFact']
-        if header != 'More': # TODO: remove newsfeed, etc. as well
-            with open('/Users/Rahul/Desktop/Main/Side_projects/all_in_one/for_me/app_file/track_headers', 'a') as f:
-                f.write(header + '\n')
-        return HttpResponse('success')
+    # if request.method == 'POST' and 'pieFact' in request.POST:
+    #     header = request.POST['pieFact']
+    #     if header != 'More': # TODO: remove newsfeed, etc. as well
+    #         with open('/Users/Rahul/Desktop/Side_projects/all_in_one/for_me/app_file/track_headers', 'a') as f:
+    #             f.write(header + '\n')
+    #     return HttpResponse('success')
 
     return render(request, 'te.html', {'object_list': pag(b, request)})
+
+
+def feature_list(request):
+    feature_feed = Feature.objects.all().order_by('-pk')
+    feature_form = FeatureForm(request.POST or None)
+    if request.method == 'POST':
+        if feature_form.is_valid():
+            print('asdjasnd')
+            feature_form.save()
+            # feature.save()
+            return redirect('feature')
+    return render(request, 'feature.html', {'object_list': pag(feature_feed, request), 'form': feature_form})
+
+
+def delete_feature(request, id=None):
+    instance = get_object_or_404(Feature, id=id)
+    instance.delete()
+    return redirect("feature")
 
 
 def reddit(request):
@@ -109,13 +126,13 @@ def other(request):
     return render(request, 'other.html', {'object_list': pag(other_list, request)})
 
 
-def twitter(request):
-    """Twitter Page"""
-    tweets = Tweet.objects.all().order_by('-pk')
-    if request.POST.get('search_word'):
-        word = request.POST.get('search_word')
-        add_url(word, '/Users/Rahul/Desktop/Main/Side_projects/all_in_one/for_me/app_file/twitter_search_words')
-    return render(request, 'twitter.html', {'object_list': pag(tweets, request)})
+# def twitter(request):
+#     """Twitter Page"""
+#     tweets = Tweet.objects.all().order_by('-pk')
+#     if request.POST.get('search_word'):
+#         word = request.POST.get('search_word')
+#         add_url(word, '/Users/Rahul/Desktop/Side_projects/all_in_one/for_me/app_file/twitter_search_words')
+#     return render(request, 'twitter.html', {'object_list': pag(tweets, request)})
 
 
 def bookmark(request, new_id):
@@ -141,71 +158,3 @@ def bookmark_page(request):
     """Bookmark Page"""
     b = BookMark.objects.all().order_by('-pk')
     return render(request, 'bookmark.html', {'object_list': pag(b, request)})
-
-
-
-
-
-############### CHATBOT ###############
-
-# ACCESS_TOKEN = 'EAADFtkIzrDgBAMM5GfFUQ6CNnR1GUr4hib9XX6oC9EcrYtqr6LjftQwZCAGRVuhed5hY9pFDU8ukNDemq4KL4wCOiRwRntc0TScsVV9Rmv6yGCt3ZAZA56dd1t0TbgqPWT4gg1JFN0URbB7zUyihitHVGLitkkpISmjN38lvAZDZD'
-#
-# def post_facebook_message(fbid, received_message):
-#     """Responding to incoming messages; helper function to post()"""
-#
-#     user_details_url = "https://graph.facebook.com/v2.6/%s" % fbid
-#     user_details_params = {'fields': 'first_name,last_name,profile_pic', 'access_token': PAGE_ACCESS_TOKEN}
-#     user_details = requests.get(user_details_url, user_details_params).json()
-#     joke_text = 'Yo ' + user_details['first_name'] + '..! ' + joke_text
-#
-#     post_message_url = 'https://graph.facebook.com/v2.6/me/messages?access_token=%s' % PAGE_ACCESS_TOKEN
-#     response_msg = json.dumps({"recipient": {"id": fbid}, "message": {"text": joke_text}})
-#     status = requests.post(post_message_url, headers={"Content-Type": "application/json"}, data=response_msg)
-#     pprint(status.json())
-#
-#
-# class FeedBot(generic.View):
-#
-#     def get(self, request, *args, **kwargs):
-#         """Verifying the access token"""
-#
-#         if self.request.GET['hub.verify_token'] == ACCESS_TOKEN:
-#             return HttpResponse(self.request.GET['hub.challenge'])
-#         else:
-#             return HttpResponse('Error, invalid token')
-#
-#     @method_decorator(csrf_exempt)
-#     def dispatch(self, request, *args, **kwargs):
-#         return generic.View.dispatch(self, request, *args, **kwargs)
-#
-#     def post(self, request, *args, **kwargs):
-#         """Handling incoming messages"""
-#         # Converts the text payload into a python dictionary
-#         incoming_message = json.loads(self.request.body.decode('utf-8'))
-#         # Facebook recommends going through every entry since they might send
-#         # multiple messages in a single call during high load
-#         for entry in incoming_message['entry']:
-#             for message in entry['messaging']:
-#                 # Check to make sure the received call is a message call
-#                 # This might be delivery, optin, postback for other events
-#                 if 'message' in message:
-#                     # Print the message to the terminal
-#                     pprint(message)
-#                     # Assuming the sender only sends text.
-#                     post_facebook_message(message['sender']['id'], message['message']['text'])
-#         return HttpResponse()
-
-
-
-
-            # def add_url(request): # TODO: Change this and put it on the same page as home page!!
-#     form = UrlForm(request.POST or None)
-#     if form.is_valid():
-#         instance = form.save(commit=False) # TODO: WTF IS COMMIT?
-#         instance.save()
-#         return HttpResponseRedirect('home')
-#
-#     context = {
-#         'form': form
-#     }
-#     return render(request, )

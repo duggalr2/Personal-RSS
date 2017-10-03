@@ -45,7 +45,7 @@ class Rss_view(generic.View):
         # Facebook recommends going through every entry since they might send
         # multiple messages in a single call during high load
         for entry in incoming_message['entry']:
-            conn = sqlite3.connect('/Users/Rahul/Desktop/Main/Side_projects/all_in_one/for_me/db.nonsense')
+            conn = sqlite3.connect('/Users/Rahul/Desktop/Side_projects/all_in_one/for_me/db.nonsense')
             c = conn.cursor()
             for message in entry['messaging']:
                 # Check to make sure the received call is a message call
