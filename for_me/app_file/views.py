@@ -4,12 +4,9 @@ from django.shortcuts import render, HttpResponseRedirect, HttpResponse, get_obj
 from .models import Feeds, Tweet, BookMark, Feature
 from .rss_feed import add_url
 from .enew_rss import run_it
-import multiprocessing
 from .forms import UrlForm, FeedBookMark, TweetBookMark, FeatureForm
-from .etweet_feed import execute_tweets
 from django.views.decorators.csrf import csrf_exempt
 from sklearn.feature_extraction.text import TfidfVectorizer
-from django.views.decorators.cache import cache_page
 
 
 def pag(a, request):
@@ -18,10 +15,8 @@ def pag(a, request):
     try:
         blog_post = paginator.page(page)
     except PageNotAnInteger:
-        # If page is not an integer, deliver first page.
         blog_post = paginator.page(1)
     except EmptyPage:
-        # If page is out of range (e.g. 9999), deliver last page of results.
         blog_post = paginator.page(paginator.num_pages)
     return blog_post
 
@@ -41,7 +36,6 @@ def similarity(new_header):
     return scores[0]
 
 
-# @cache_page(60 * 10)
 @csrf_exempt
 def home(request):
     b = Feeds.objects.all().order_by('-pk')
@@ -58,27 +52,6 @@ def home(request):
         search_word = request.POST.get('search')
         object_list = Feeds.objects.filter(title__contains=search_word)
         return render(request, 'te.html', {'object_list': pag(object_list, request)})
-
-
-        # return render(request, 'te.html')
-        # return render(request, 'te.html')
-        # p1 = multiprocessing.Process(target=run_it)
-        # p2 = multiprocessing.Process(target=execute_tweets)
-        # p1.start()
-        # p2.start()
-        # p1.join()
-        # p2.join()
-
-        # run_it()
-        # # recommend_id = feed_execute()
-        # execute_tweets()
-
-    # if request.method == 'POST' and 'pieFact' in request.POST:
-    #     header = request.POST['pieFact']
-    #     if header != 'More': # TODO: remove newsfeed, etc. as well
-    #         with open('/Users/Rahul/Desktop/Side_projects/all_in_one/for_me/app_file/track_headers', 'a') as f:
-    #             f.write(header + '\n')
-    #     return HttpResponse('success')
 
     return render(request, 'te.html', {'object_list': pag(b, request)})
 
