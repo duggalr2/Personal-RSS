@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1f6c7a18-e02b-4442-82ea-ea901599be0a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/for_me/.env" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/for_me/app_file/track_headers" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/for_me/track_headers" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/for_me/app_file/brute_feed.py" afterPath="$PROJECT_DIR$/for_me/app_file/not_used/brute_feed.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/for_me/app_file/etweet_feed.py" afterPath="$PROJECT_DIR$/for_me/app_file/not_used/etweet_feed.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/for_me/app_file/main.py" afterPath="$PROJECT_DIR$/for_me/app_file/not_used/main.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/for_me/app_file/twitter_search_words" afterPath="$PROJECT_DIR$/for_me/app_file/not_used/twitter_search_words" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/for_me/app_file/views.py" afterPath="$PROJECT_DIR$/for_me/app_file/views.py" />
-    </list>
+    <list default="true" id="1f6c7a18-e02b-4442-82ea-ea901599be0a" name="Default" comment="" />
     <ignored path="all_in_one.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -46,8 +36,8 @@
       <file leaf-file-name="model_topics.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/for_me/app_file/model_topics.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+            <state relative-caret-position="330">
+              <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
               <folding>
                 <marker date="1506959161000" expanded="true" signature="639:670" ph="SELECT link app_file_feeds" />
                 <marker date="1506959161000" expanded="true" signature="917:964" ph="INSERT INTO app_file_feeds... " />
@@ -526,9 +516,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21405493" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21405493" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32802126" sideWeight="0.503231" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -920,8 +910,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/for_me/app_file/model_topics.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+        <state relative-caret-position="330">
+          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
           <folding>
             <marker date="1506959161000" expanded="true" signature="639:670" ph="SELECT link app_file_feeds" />
             <marker date="1506959161000" expanded="true" signature="917:964" ph="INSERT INTO app_file_feeds... " />
