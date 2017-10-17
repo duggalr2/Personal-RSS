@@ -2,11 +2,15 @@ from django.contrib import messages
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render, HttpResponseRedirect, HttpResponse, get_object_or_404, redirect
 from .models import Feeds, Tweet, BookMark, Feature
-from .rss_feed import add_url
-from .enew_rss import run_it
+from .enew_rss import run_it, summarize
 from .forms import UrlForm, FeedBookMark, TweetBookMark, FeatureForm
 from django.views.decorators.csrf import csrf_exempt
 from sklearn.feature_extraction.text import TfidfVectorizer
+
+
+def add_url(url, filename):
+    with open(filename, 'a') as f:
+        f.write(url + '\n')
 
 
 def pag(a, request):
@@ -61,9 +65,7 @@ def feature_list(request):
     feature_form = FeatureForm(request.POST or None)
     if request.method == 'POST':
         if feature_form.is_valid():
-            print('asdjasnd')
             feature_form.save()
-            # feature.save()
             return redirect('feature')
     return render(request, 'feature.html', {'object_list': pag(feature_feed, request), 'form': feature_form})
 
@@ -99,15 +101,6 @@ def other(request):
     return render(request, 'other.html', {'object_list': pag(other_list, request)})
 
 
-# def twitter(request):
-#     """Twitter Page"""
-#     tweets = Tweet.objects.all().order_by('-pk')
-#     if request.POST.get('search_word'):
-#         word = request.POST.get('search_word')
-#         add_url(word, '/Users/Rahul/Desktop/Side_projects/all_in_one/for_me/app_file/twitter_search_words')
-#     return render(request, 'twitter.html', {'object_list': pag(tweets, request)})
-
-
 def bookmark(request, new_id):
     """Handle's the bookmarking"""
     if request.method == 'GET' and 'feed_bookmark' in request.GET:
@@ -117,20 +110,43 @@ def bookmark(request, new_id):
             b = BookMark.objects.create(title=instance.title, link=instance.link)
             b.save()
             # print(request.path)
-            previous_url = request.META.get('HTTP_REFERER')
-            # return HttpResponseRedirect()
-            return redirect(previous_url)
+            previous_url = request.META.get('HTTP_REFERER')  # retrieve's previous url user was on
+            return redirect(previous_url)  # redirect back to page the user was on;
 
-    elif request.method == 'GET' and 'tweet_bookmark' in request.GET:
-        instance = get_object_or_404(Tweet, id=new_id)
-        form = TweetBookMark(request.GET, instance=instance)
-        if form.is_valid():
-            b = BookMark.objects.create(title=instance.tweet)
-            b.save()
-            return redirect('twitter')
+    # elif request.method == 'GET' and 'tweet_bookmark' in request.GET:
+    #     instance = get_object_or_404(Tweet, id=new_id)
+    #     form = TweetBookMark(request.GET, instance=instance)
+    #     if form.is_valid():
+    #         b = BookMark.objects.create(title=instance.tweet)
+    #         b.save()
+    #         return redirect('twitter')
+
+
+def article_summary(request, new_id):
+    if request.method == 'GET' and 'feed_summary' in request.GET:
+        instance = Feeds.objects.get(id=new_id)
+        print(instance)
+        # summary = summarize()
+        # instance = get_object_or_404(Feeds, id=new_id)
+        # form = FeedBookMark(request.GET, instance=instance)
+        # if form.is_valid():
+        #     b = BookMark.objects.create(title=instance.title, link=instance.link)
+        #     b.save()
+        #     # print(request.path)
+        #     previous_url = request.META.get('HTTP_REFERER')  # retrieve's previous url user was on
+        #     return redirect(previous_url)  # redirect back to page the user was on;
 
 
 def bookmark_page(request):
     """Bookmark Page"""
     b = BookMark.objects.all().order_by('-pk')
     return render(request, 'bookmark.html', {'object_list': pag(b, request)})
+
+
+# def twitter(request):
+#     """Twitter Page"""
+#     tweets = Tweet.objects.all().order_by('-pk')
+#     if request.POST.get('search_word'):
+#         word = request.POST.get('search_word')
+#         add_url(word, '/Users/Rahul/Desktop/Side_projects/all_in_one/for_me/app_file/twitter_search_words')
+#     return render(request, 'twitter.html', {'object_list': pag(tweets, request)})

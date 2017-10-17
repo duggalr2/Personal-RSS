@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1f6c7a18-e02b-4442-82ea-ea901599be0a" name="Default" comment="" />
+    <list default="true" id="1f6c7a18-e02b-4442-82ea-ea901599be0a" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/for_me/app_file/db.nonsense" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/for_me/app_file/not_used/brute_feed.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/for_me/app_file/not_used/etweet_feed.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/for_me/app_file/not_used/main.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/for_me/app_file/not_used/model_topics.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/for_me/app_file/not_used/rss_feed.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/for_me/app_file/not_used/twitter_search_words" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/for_me/scripts/s.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/for_me/db.nonsense" afterPath="$PROJECT_DIR$/for_me/db.nonsense" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/for_me/app_file/enew_rss.py" afterPath="$PROJECT_DIR$/for_me/app_file/enew_rss.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/for_me/app_file/models.py" afterPath="$PROJECT_DIR$/for_me/app_file/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/for_me/app_file/views.py" afterPath="$PROJECT_DIR$/for_me/app_file/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/for_me/for_me/urls.py" afterPath="$PROJECT_DIR$/for_me/for_me/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/for_me/templates/te.html" afterPath="$PROJECT_DIR$/for_me/templates/te.html" />
+    </list>
     <ignored path="all_in_one.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -13,7 +29,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/all_in_one$enew_rss.coverage" NAME="enew_rss Coverage Results" MODIFIED="1506985100860" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/for_me/app_file" />
+    <SUITE FILE_PATH="coverage/all_in_one$enew_rss.coverage" NAME="enew_rss Coverage Results" MODIFIED="1508256724609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/for_me/app_file" />
+    <SUITE FILE_PATH="coverage/all_in_one$article_summarizer.coverage" NAME="article_summarizer Coverage Results" MODIFIED="1508280699593" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/for_me/app_file" />
     <SUITE FILE_PATH="coverage/all_in_one$brute_feed.coverage" NAME="brute_feed Coverage Results" MODIFIED="1504973226450" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/for_me/app_file" />
     <SUITE FILE_PATH="coverage/all_in_one$noslang_script.coverage" NAME="noslang_script Coverage Results" MODIFIED="1507070859125" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../.." />
     <SUITE FILE_PATH="coverage/all_in_one$generate_dataset.coverage" NAME="generate_dataset Coverage Results" MODIFIED="1506959462319" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/for_me/app_file" />
@@ -22,6 +39,7 @@
     <SUITE FILE_PATH="coverage/all_in_one$main.coverage" NAME="main Coverage Results" MODIFIED="1505325075298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/for_me/app_file" />
     <SUITE FILE_PATH="coverage/all_in_one$new_rss.coverage" NAME="new_rss Coverage Results" MODIFIED="1505324706312" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/for_me/app_file" />
     <SUITE FILE_PATH="coverage/all_in_one$tweet_feed.coverage" NAME="tweet_feed Coverage Results" MODIFIED="1504201747594" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/for_me/app_file" />
+    <SUITE FILE_PATH="coverage/all_in_one$craigslist_script.coverage" NAME="craigslist_script Coverage Results" MODIFIED="1507145566016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/for_me/app_file" />
     <SUITE FILE_PATH="coverage/all_in_one$rss_feed.coverage" NAME="rss_feed Coverage Results" MODIFIED="1505322774604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/for_me/app_file" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -32,15 +50,63 @@
     <favorites_list name="all_in_one" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="model_topics.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/for_me/app_file/model_topics.py">
+    <leaf>
+      <file leaf-file-name="enew_rss.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/for_me/app_file/enew_rss.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+            <state relative-caret-position="627">
+              <caret line="72" column="37" selection-start-line="72" selection-start-column="37" selection-end-line="72" selection-end-column="37" />
               <folding>
-                <marker date="1506959161000" expanded="true" signature="639:670" ph="SELECT link app_file_feeds" />
-                <marker date="1506959161000" expanded="true" signature="917:964" ph="INSERT INTO app_file_feeds... " />
+                <element signature="e#0#74#0" expanded="true" />
+                <marker date="1508282822000" expanded="true" signature="1872:1906" ph="SELECT MAX(i... app_file_feeds" />
+                <marker date="1508282822000" expanded="true" signature="2292:2338" ph="INSERT INTO app_file_feeds... " />
+                <marker date="1508282822000" expanded="true" signature="2547:2573" ph="DELETE FROM " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/for_me/for_me/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/for_me/app_file/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="282">
+              <caret line="127" column="23" selection-start-line="127" selection-start-column="23" selection-end-line="127" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="te.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/for_me/templates/te.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="554">
+              <caret line="138" column="51" selection-start-line="138" selection-start-column="51" selection-end-line="138" selection-end-column="51" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#td#1;n#tr#0;n#form#0;n#tbody#0;n#table#0;n#td#0;n#tr#1;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="article_summarizer.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/for_me/app_file/article_summarizer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -51,8 +117,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -70,7 +136,6 @@
         <option value="$PROJECT_DIR$/for_me/templates/other.html" />
         <option value="$PROJECT_DIR$/for_me/templates/python.html" />
         <option value="$PROJECT_DIR$/for_me/templates/reddit.html" />
-        <option value="$PROJECT_DIR$/for_me/app_file/urls" />
         <option value="$PROJECT_DIR$/for_me/templates/recommend_page.html" />
         <option value="$PROJECT_DIR$/for_me/app_file/track_headers" />
         <option value="$PROJECT_DIR$/rss_chatbot/rss_chatbot/urls.py" />
@@ -85,16 +150,19 @@
         <option value="$PROJECT_DIR$/for_me/app_file/etweet_feed.py" />
         <option value="$PROJECT_DIR$/for_me/app_file/brute_feed.py" />
         <option value="$PROJECT_DIR$/for_me/app_file/generate_dataset.py" />
-        <option value="$PROJECT_DIR$/for_me/templates/te.html" />
-        <option value="$PROJECT_DIR$/for_me/app_file/enew_rss.py" />
-        <option value="$PROJECT_DIR$/for_me/app_file/models.py" />
-        <option value="$PROJECT_DIR$/for_me/app_file/forms.py" />
         <option value="$PROJECT_DIR$/for_me/templates/base.html" />
-        <option value="$PROJECT_DIR$/for_me/for_me/urls.py" />
         <option value="$PROJECT_DIR$/for_me/templates/feature.html" />
         <option value="$PROJECT_DIR$/../../noslang_script.py" />
-        <option value="$PROJECT_DIR$/for_me/app_file/views.py" />
         <option value="$PROJECT_DIR$/for_me/app_file/model_topics.py" />
+        <option value="$PROJECT_DIR$/for_me/app_file/craigslist_script.py" />
+        <option value="$PROJECT_DIR$/for_me/app_file/urls" />
+        <option value="$PROJECT_DIR$/for_me/app_file/forms.py" />
+        <option value="$PROJECT_DIR$/for_me/app_file/article_summarizer.py" />
+        <option value="$PROJECT_DIR$/for_me/app_file/models.py" />
+        <option value="$PROJECT_DIR$/for_me/app_file/enew_rss.py" />
+        <option value="$PROJECT_DIR$/for_me/app_file/views.py" />
+        <option value="$PROJECT_DIR$/for_me/templates/te.html" />
+        <option value="$PROJECT_DIR$/for_me/for_me/urls.py" />
       </list>
     </option>
   </component>
@@ -134,6 +202,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -152,9 +221,58 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="all_in_one" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="all_in_one" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="for_me" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="all_in_one" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="all_in_one" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="for_me" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="for_me" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="all_in_one" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="all_in_one" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="for_me" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app_file" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -165,51 +283,16 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/for_me/app_file/not_used" />
-      <recent name="$PROJECT_DIR$/for_me/app_file" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/rss_chatbot/fb_chatbot" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/for_me/app_file/not_used" />
+      <recent name="$PROJECT_DIR$/../../" />
+      <recent name="$PROJECT_DIR$/for_me/app_file" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python.model_topics">
-    <configuration default="false" name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/for_me/app_file" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="all_in_one" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/for_me/app_file/not_used/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="generate_dataset" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/for_me/app_file" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="all_in_one" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/for_me/app_file/generate_dataset.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.article_summarizer">
     <configuration default="false" name="enew_rss" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -259,7 +342,43 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="all_in_one" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/for_me/app_file/model_topics.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/for_me/app_file/not_used/model_topics.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="craigslist_script" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/for_me/app_file" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="all_in_one" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../craigslist_script.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="article_summarizer" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/for_me/app_file" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="all_in_one" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/for_me/app_file/article_summarizer.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -473,19 +592,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.main" />
-      <item index="1" class="java.lang.String" itemvalue="Python.generate_dataset" />
-      <item index="2" class="java.lang.String" itemvalue="Python.enew_rss" />
-      <item index="3" class="java.lang.String" itemvalue="Python.noslang_script" />
-      <item index="4" class="java.lang.String" itemvalue="Python.model_topics" />
+      <item index="0" class="java.lang.String" itemvalue="Python.enew_rss" />
+      <item index="1" class="java.lang.String" itemvalue="Python.noslang_script" />
+      <item index="2" class="java.lang.String" itemvalue="Python.model_topics" />
+      <item index="3" class="java.lang.String" itemvalue="Python.craigslist_script" />
+      <item index="4" class="java.lang.String" itemvalue="Python.article_summarizer" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.model_topics" />
-        <item index="1" class="java.lang.String" itemvalue="Python.noslang_script" />
-        <item index="2" class="java.lang.String" itemvalue="Python.enew_rss" />
-        <item index="3" class="java.lang.String" itemvalue="Python.generate_dataset" />
-        <item index="4" class="java.lang.String" itemvalue="Python.main" />
+        <item index="0" class="java.lang.String" itemvalue="Python.article_summarizer" />
+        <item index="1" class="java.lang.String" itemvalue="Python.enew_rss" />
+        <item index="2" class="java.lang.String" itemvalue="Python.craigslist_script" />
+        <item index="3" class="java.lang.String" itemvalue="Python.model_topics" />
+        <item index="4" class="java.lang.String" itemvalue="Python.noslang_script" />
       </list>
     </recent_temporary>
   </component>
@@ -515,17 +634,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21405493" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22051696" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32802126" sideWeight="0.503231" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3328767" sideWeight="0.49676898" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35753426" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53287673" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -572,15 +691,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/for_me/templates/reddit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="36" column="64" selection-start-line="0" selection-start-column="0" selection-end-line="51" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/for_me/app_file/requirements.txt" />
-    <entry file="file://$PROJECT_DIR$/for_me/requirements.txt" />
     <entry file="file://$PROJECT_DIR$/for_me/app_file/tweet_feed.py" />
     <entry file="file://$PROJECT_DIR$/for_me/app_file/new_rss.py" />
     <entry file="file://$PROJECT_DIR$/rss_chatbot/fb_chatbot/enew_rss.py">
@@ -646,13 +756,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/for_me/scripts/s.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rss_chatbot/fb_chatbot/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-490">
@@ -683,13 +786,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/for_me/app_file/feed_chatbot.py" />
     <entry file="file://$PROJECT_DIR$/for_me/app_file/generate_dataset.py" />
-    <entry file="file://$PROJECT_DIR$/for_me/templates/te.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/for_me/templates/recommend_page.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -704,13 +800,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/for_me/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-106">
-          <caret line="44" column="50" selection-start-line="44" selection-start-column="50" selection-end-line="44" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/for_me/templates/google.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="515">
@@ -720,26 +809,65 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/for_me/app_file/summarize/summarize.py" />
     <entry file="file://$PROJECT_DIR$/for_me/summarize.py/setup.py" />
-    <entry file="file://$PROJECT_DIR$/../../noslang_script.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/for_me/for_me/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../noslang_script.py" />
     <entry file="file://$PROJECT_DIR$/for_me/templates/feature.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="348">
           <caret line="39" column="74" selection-start-line="39" selection-start-column="74" selection-end-line="39" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/for_me/app_file/not_used/brute_feed.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-33">
+          <caret line="62" column="48" selection-start-line="62" selection-start-column="48" selection-end-line="62" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/for_me/app_file/not_used/etweet_feed.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/for_me/app_file/not_used/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/for_me/app_file/track_headers" />
+    <entry file="file://$PROJECT_DIR$/for_me/app_file/not_used/twitter_search_words">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/for_me/.env" />
+    <entry file="file://$PROJECT_DIR$/for_me/track_headers" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../craigslist_script.py" />
+    <entry file="file://$PROJECT_DIR$/for_me/app_file/callgrind.out">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9570">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/for_me/app_file/not_used/rss_feed.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1110">
+          <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -768,69 +896,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/for_me/app_file/not_used/brute_feed.py">
+    <entry file="file://$PROJECT_DIR$/for_me/app_file/not_used/model_topics.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-33">
-          <caret line="62" column="48" selection-start-line="62" selection-start-column="48" selection-end-line="62" selection-end-column="48" />
-          <folding>
-            <marker date="1506959161000" expanded="true" signature="1783:1811" ph="SELECT * FRO... app_file_feeds" />
-            <marker date="1506959161000" expanded="true" signature="2402:2448" ph="INSERT INTO app_file_feeds... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/for_me/app_file/enew_rss.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
-          <folding>
-            <marker date="1506986583000" expanded="true" signature="1052:1128" ph="SELECT * FRO... app_file_feeds" />
-            <marker date="1506986583000" expanded="true" signature="1093:1127" ph="SELECT MAX(i... app_file_feeds" />
-            <marker date="1506986583000" expanded="true" signature="1350:1376" ph="DELETE FROM " />
-            <marker date="1506986583000" expanded="true" signature="1615:1661" ph="INSERT INTO app_file_feeds... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/for_me/app_file/not_used/etweet_feed.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+        <state relative-caret-position="435">
+          <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/for_me/app_file/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/for_me/app_file/not_used/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/for_me/app_file/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/for_me/app_file/rss_feed.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-168">
-          <caret line="60" column="31" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="31" />
-          <folding>
-            <marker date="1506959161000" expanded="true" signature="1936:1964" ph="SELECT * FRO... app_file_feeds" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -842,60 +912,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/for_me/app_file/track_headers">
+    <entry file="file://$PROJECT_DIR$/for_me/scripts/s.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="4574" column="0" selection-start-line="4574" selection-start-column="0" selection-end-line="4574" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/for_me/app_file/not_used/twitter_search_words">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="195">
+          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/for_me/app_file/urls">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/for_me/app_file/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/for_me/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/for_me/track_headers">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <caret line="0" column="47" selection-start-line="0" selection-start-column="47" selection-end-line="0" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -903,19 +931,83 @@
     <entry file="file://$PROJECT_DIR$/for_me/static/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
-          <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+          <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/for_me/app_file/model_topics.py">
+    <entry file="file://$PROJECT_DIR$/for_me/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+        <state relative-caret-position="633">
+          <caret line="102" column="75" selection-start-line="102" selection-start-column="75" selection-end-line="102" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/for_me/app_file/article_summarizer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
           <folding>
-            <marker date="1506959161000" expanded="true" signature="639:670" ph="SELECT link app_file_feeds" />
-            <marker date="1506959161000" expanded="true" signature="917:964" ph="INSERT INTO app_file_feeds... " />
+            <element signature="e#0#40#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/for_me/app_file/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/for_me/app_file/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/for_me/app_file/enew_rss.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="72" column="37" selection-start-line="72" selection-start-column="37" selection-end-line="72" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#74#0" expanded="true" />
+            <marker date="1508282822000" expanded="true" signature="1872:1906" ph="SELECT MAX(i... app_file_feeds" />
+            <marker date="1508282822000" expanded="true" signature="2292:2338" ph="INSERT INTO app_file_feeds... " />
+            <marker date="1508282822000" expanded="true" signature="2547:2573" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/for_me/templates/te.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="554">
+          <caret line="138" column="51" selection-start-line="138" selection-start-column="51" selection-end-line="138" selection-end-column="51" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#td#1;n#tr#0;n#form#0;n#tbody#0;n#table#0;n#td#0;n#tr#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/for_me/app_file/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="127" column="23" selection-start-line="127" selection-start-column="23" selection-end-line="127" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/for_me/for_me/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -1,6 +1,11 @@
 from multiprocessing.pool import ThreadPool  # uses threads, not processes
 import feedparser
 import sqlite3
+from sumy.parsers.html import HtmlParser
+from sumy.nlp.tokenizers import Tokenizer
+from sumy.summarizers.lsa import LsaSummarizer as Summarizer
+from sumy.nlp.stemmers import Stemmer
+from sumy.utils import get_stop_words
 
 
 f = open('/Users/Rahul/Desktop/Side_projects/all_in_one/for_me/app_file/urls')
@@ -21,31 +26,47 @@ def categorize(url):
     return category
 
 
-def parse_feed(feed_url):
-    result, category_list = [], []
+def parse_feed(feed_url):  # Todo: Dictionary possible?
+    result = []
     parsed_feed = feedparser.parse(feed_url)
-    category = categorize(feed_url)
     for story in parsed_feed.get('entries'):
         title = story.get('title')
         link = story.get('link')
+        category = categorize(feed_url)
         result.append([title, link, category])
     return result
 
 
+def summarize(url):
+    LANGUAGE = "english"
+    SENTENCES_COUNT = 10
+
+    # url = "https://medium.com/@shlominissan/object-oriented-programming-in-vanilla-javascript-f3945b15f08a"
+    parser = HtmlParser.from_url(url, Tokenizer(LANGUAGE))
+    stemmer = Stemmer(LANGUAGE)
+
+    summarizer = Summarizer(stemmer)
+    summarizer.stop_words = get_stop_words(LANGUAGE)
+
+    s = ''
+    for sentence in summarizer(parser.document, SENTENCES_COUNT):
+        s += str(sentence) + ' '
+    return s
+    # for sentence in summarizer(parser.document, SENTENCES_COUNT):
+    #     print(sentence)
+
+conn = sqlite3.connect('/Users/Rahul/Desktop/Side_projects/all_in_one/for_me/db.nonsense', check_same_thread=False)
+c = conn.cursor()
+
+
 def feed_execute(parsed_feed):
-    """
-    """
-    conn = sqlite3.connect('/Users/Rahul/Desktop/Side_projects/all_in_one/for_me/db.nonsense')
-    c = conn.cursor()
-    c.execute('SELECT * FROM app_file_feeds WHERE id = (SELECT MAX(id) FROM app_file_feeds);')
+    c.execute('SELECT MAX(id) FROM app_file_feeds')
     recent_primary_key = c.fetchone()
-    if recent_primary_key is None:
+    if recent_primary_key[0] is None:
         recent_primary_key = 1
     else:
         recent_primary_key = recent_primary_key[0]
-    if recent_primary_key >= 800:
-        c.execute("DELETE FROM app_file_feeds")
-        conn.commit()
+
     for number in range(len(parsed_feed)):
         recent_primary_key += 1
         title = parsed_feed[number][0]
@@ -58,16 +79,10 @@ def feed_execute(parsed_feed):
 
 
 def run_it():
-    """ Main function used in Django view"""
-    pool = ThreadPool()   # ThreadPool instead of Pool
+    """ Main function used in Django view to fetch all rss feeds"""
+    c.execute("DELETE FROM app_file_feeds")
+    conn.commit()
+    pool = ThreadPool()
     results = pool.map(parse_feed, hit_list)
     for result in results:
         feed_execute(result)
-
-# if __name__=="__main__":
-#     run_it()
-#     pool = ThreadPool()   # ThreadPool instead of Pool
-#     results = pool.map(parse_feed, hit_list)
-#     for result in results:
-#         feed_execute(result)
-# feed_execute(parse_feed(hit_list[0]))

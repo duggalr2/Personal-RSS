@@ -53,8 +53,6 @@
 {#                                        </td>#}
 
 {% extends 'base.html' %}
-{% load cache %}
-{% cache 500 content %}
 {% block content %}
                                         <td style="text-align:right;padding-right:4px;">
 
@@ -63,7 +61,9 @@
 
                                             <span class="pagetop">
                                                 <form method="POST">
+                                                    {{ form.as_ }}
                                                     Url (Rss Format): <input type="text" name="url">{% csrf_token %}
+{#                                                    Category for URL (Optional): <input type="text" name="url">{% csrf_token %}#}
                                                     <input type="submit" value="Submit" />
 
                                                 </form>
@@ -98,7 +98,7 @@
                                                         <span>{{ i.id }}. </span>
                                                     </td>
                                                     <td class="title">
-                                                        <input id = 'im' type='image' src="https://news.ycombinator.com/grayarrow2x.gif" width="11">&nbsp;<a href="{{ i.link }}" id="headline"  style="text-decoration: none; color: black;">{{ i.title }}</a>
+                                                        <input id = 'im' type='image' src="https://news.ycombinator.com/grayarrow2x.gif" width="11"> <a href="{{ i.link }}" id="headline"  style="text-decoration: none; color: black;">{{ i.title }}</a>
                                                             {% if i.category == 'Google' %}
                                                                 <a href="{% url 'google' %}"><span class="tag" style="font-family:Verdana, Geneva, sans-serif; font-size:  9pt;
        color:#ffffff; background-color:#222222; padding-top: 2px;
@@ -145,33 +145,33 @@
                                         {% endfor %}
 
 
-<script>
+{% endblock %}
 
 
 
-
+{#<script>#}
 
 {#    var Anchors = document.getElementsByTagName('a');#}
-    var text = '';
-    document.addEventListener('click', function(e) {
-            e = e || window.event;
-            var target = e.target || e.srcElement;
-            text = target.textContent || text.innerText;
-            console.log(text);
-            updatePieFact(text)
-        }, false);
-
-
-    function updatePieFact(p){
-        var URL = "{% url 'home' %}";
-        var data = {'pieFact': p};
-            $.post(URL, data, function(response){
-                if(response === 'success'){
-                    console.log('nice');
-                }
-                else{ console.log('Error! :('); }
-            });
-        }
+{#    var text = '';#}
+{#    document.addEventListener('click', function(e) {#}
+{#            e = e || window.event;#}
+{#            var target = e.target || e.srcElement;#}
+{#            text = target.textContent || text.innerText;#}
+{#            console.log(text);#}
+{#            updatePieFact(text)#}
+{#        }, false);#}
+{##}
+{##}
+{#    function updatePieFact(p){#}
+{#        var URL = "{% url 'home' %}";#}
+{#        var data = {'pieFact': p};#}
+{#            $.post(URL, data, function(response){#}
+{#                if(response === 'success'){#}
+{#                    console.log('nice');#}
+{#                }#}
+{#                else{ console.log('Error! :('); }#}
+{#            });#}
+{#        }#}
 
 
 
@@ -187,13 +187,8 @@
 {#    console.log(text)#}
 {#    updatePieFact(text)#}
 
+{#</script>#}
 
-
-</script>
-
-
-{% endblock %}
-{% endcache %}
 
 
 
