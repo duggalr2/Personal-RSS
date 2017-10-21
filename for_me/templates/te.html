@@ -98,51 +98,68 @@
                                                         <span>{{ i.id }}. </span>
                                                     </td>
                                                     <td class="title">
-                                                        <input id = 'im' type='image' src="https://news.ycombinator.com/grayarrow2x.gif" width="11"> <a href="{{ i.link }}" id="headline"  style="text-decoration: none; color: black;">{{ i.title }}</a>
-                                                            {% if i.category == 'Google' %}
-                                                                <a href="{% url 'google' %}"><span class="tag" style="font-family:Verdana, Geneva, sans-serif; font-size:  9pt;
-       color:#ffffff; background-color:#222222; padding-top: 2px;
-       padding-bottom: 2px; padding-left: 5px; padding-right: 5px;
-       white-space: nowrap; border-radius: 5px;">{{ i.category }}</span></a>
-{#                                                                <span ><a href="{% url 'google' %}" class="tag">{{ i.category }}</a></span>#}
-                                                            {% endif %}
-                                                            {% if i.category == 'Reddit' %}
-                                                                <a href="{% url 'reddit' %}"><span class="tag" style="font-family:Verdana, Geneva, sans-serif; font-size:  9pt;
-       color:#ffffff; background-color:#222222; padding-top: 2px;
-       padding-bottom: 2px; padding-left: 5px; padding-right: 5px;
-       white-space: nowrap; border-radius: 5px;">{{ i.category }}</span></a>
+{#                                                        <form method='GET' action='{% url 'feed_bookmark' new_id=i.id %}'>#}
+{#                                                            {{ form.as_p }}#}
+{#                                                            <input id = 'im' type='image' src="https://news.ycombinator.com/grayarrow2x.gif" width="11"> <a href="{{ i.link }}" id="headline"  style="text-decoration: none; color: black;">{{ i.title }}</a>#}
+                                                        <form method='GET' action='{% url 'feed_bookmark' new_id=i.id %}'>
+                                                            {{ form.as_p }}
+                                                            <input id = 'im' type='image' src="https://news.ycombinator.com/grayarrow2x.gif" width="11"> <a href="{{ i.link }}" id="headline"  style="text-decoration: none; color: black;">{{ i.title }}</a>
+                                                            <input name='feed_bookmark' type='hidden' value="bookmark" width="12" >
 
-                                                            {% endif %}
-                                                            {% if i.category == 'Hacker News' %}
-                                                                 <a href="{% url 'hacker_news' %}"><span class="tag" style="font-family:Verdana, Geneva, sans-serif; font-size:  9pt;
-       color:#ffffff; background-color:#222222; padding-top: 2px;
-       padding-bottom: 2px; padding-left: 5px; padding-right: 5px;
-       white-space: nowrap; border-radius: 5px;">{{ i.category }}</span></a>
-{#                                                                <a href="{% url 'hacker_news' %}"><span class="tag">{{ i.category }}</span></a>#}
-                                                            {% endif %}
-                                                            {% if i.category == 'Python' %}
-                                                                 <a href="{% url 'python' %}"><span class="tag" style="font-family:Verdana, Geneva, sans-serif; font-size:  9pt;
-       color:#ffffff; background-color:#222222; padding-top: 2px;
-       padding-bottom: 2px; padding-left: 5px; padding-right: 5px;
-       white-space: nowrap; border-radius: 5px;">{{ i.category }}</span></a>
-{#                                                                <span class="tag"><a href="{% url 'python' %}">{{ i.category }}</a></span>#}
-                                                            {% endif %}
-                                                            {% if i.category == 'Other' %}
-                                                                <a href="{% url 'other' %}"><span class="tag" style="font-family:Verdana, Geneva, sans-serif; font-size:  9pt;
-       color:#ffffff; background-color:#222222; padding-top: 2px;
-       padding-bottom: 2px; padding-left: 5px; padding-right: 5px;
-       white-space: nowrap; border-radius: 5px;">{{ i.category }}</span></a>
-{#                                                                <span class="tag"><a href="{% url 'other' %}">{{ i.category }}</a></span>#}
-                                                            {% endif %}
-                                                        <input name='feed_bookmark' type='hidden' value="bookmark" width="12" >
+                                                                {% if i.category == 'Google' %}
+                                                                    <a href="{% url 'google' %}"><span class="tag" style="font-family:Verdana, Geneva, sans-serif; font-size:  9pt;
+           color:#ffffff; background-color:#222222; padding-top: 2px;
+           padding-bottom: 2px; padding-left: 5px; padding-right: 5px;
+           white-space: nowrap; border-radius: 5px;">{{ i.category }}</span></a>
+                                                                {% endif %}
+                                                                {% if i.category == 'Reddit' %}
+                                                                    <a href="{% url 'reddit' %}"><span class="tag" style="font-family:Verdana, Geneva, sans-serif; font-size:  9pt;
+           color:#ffffff; background-color:#222222; padding-top: 2px;
+           padding-bottom: 2px; padding-left: 5px; padding-right: 5px;
+           white-space: nowrap; border-radius: 5px;">{{ i.category }}</span></a>
+
+                                                                {% endif %}
+                                                                {% if i.category == 'Hacker News' %}
+                                                                     <a href="{% url 'hacker_news' %}"><span class="tag" style="font-family:Verdana, Geneva, sans-serif; font-size:  9pt;
+           color:#ffffff; background-color:#222222; padding-top: 2px;
+           padding-bottom: 2px; padding-left: 5px; padding-right: 5px;
+           white-space: nowrap; border-radius: 5px;">{{ i.category }}</span></a>
+                                                                {% endif %}
+                                                                {% if i.category == 'Python' %}
+                                                                     <a href="{% url 'python' %}"><span class="tag" style="font-family:Verdana, Geneva, sans-serif; font-size:  9pt;
+           color:#ffffff; background-color:#222222; padding-top: 2px;
+           padding-bottom: 2px; padding-left: 5px; padding-right: 5px;
+           white-space: nowrap; border-radius: 5px;">{{ i.category }}</span></a>
+                                                                {% endif %}
+                                                                {% if i.category == 'Other' %}
+                                                                    <a href="{% url 'other' %}"><span class="tag" style="font-family:Verdana, Geneva, sans-serif; font-size:  9pt;
+           color:#ffffff; background-color:#222222; padding-top: 2px;
+           padding-bottom: 2px; padding-left: 5px; padding-right: 5px;
+           white-space: nowrap; border-radius: 5px;">{{ i.category }}</span></a>
+                                                                {% endif %}
+                                                        </form>
+
+                                                            <form method='GET' action='{% url 'feed_summarize' new_id=i.id %}' style="float: right; clear: both;">
+                                                                    {{ form.as_p }}
+                                                                <input id = 'im' type='image' value="&#x2714;">
+                                                                <input name='feed_summary' type='hidden' value="summarize" width="12" >
+                                                            </form>
+
+{#                                                    <span>#}
+{##}
+{#                                                    </span>#}
+{#                                                            <input name='feed_bookmark' type='hidden' value="bookmark" width="12" >#}
+{#                                                        </form>#}
                                                     </td>
-                                            </form>
+
 
                                             <tr>
                                                 <td colspan="2"></td>
                                             </tr>
                                             <tr style="height:5px"></tr>
                                         {% endfor %}
+
+    {{ summary }}
 
 
 {% endblock %}

@@ -16,6 +16,12 @@ class FeedBookMark(forms.ModelForm):
         fields = []
 
 
+class FeedSummary(forms.ModelForm):
+    class Meta:
+        model = Feeds
+        fields = []
+
+
 class TweetBookMark(forms.ModelForm):
     class Meta:
         model = Tweet

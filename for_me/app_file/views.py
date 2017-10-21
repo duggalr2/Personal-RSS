@@ -3,7 +3,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render, HttpResponseRedirect, HttpResponse, get_object_or_404, redirect
 from .models import Feeds, Tweet, BookMark, Feature
 from .enew_rss import run_it, summarize
-from .forms import UrlForm, FeedBookMark, TweetBookMark, FeatureForm
+from .forms import UrlForm, FeedBookMark, FeatureForm, FeedSummary
 from django.views.decorators.csrf import csrf_exempt
 from sklearn.feature_extraction.text import TfidfVectorizer
 
@@ -55,7 +55,7 @@ def home(request):
     if request.POST.get('search'):
         search_word = request.POST.get('search')
         object_list = Feeds.objects.filter(title__contains=search_word)
-        return render(request, 'te.html', {'object_list': pag(object_list, request)})
+        return render(request, 'te.html', {'object_list': object_list})
 
     return render(request, 'te.html', {'object_list': pag(b, request)})
 
@@ -113,6 +113,13 @@ def bookmark(request, new_id):
             previous_url = request.META.get('HTTP_REFERER')  # retrieve's previous url user was on
             return redirect(previous_url)  # redirect back to page the user was on;
 
+    # elif request.method == 'GET' and 'feed_summary' in request.GET:
+    #     instance = get_object_or_404(Feeds, id=new_id)
+    #     form = FeedSummary(request.GET, instance=instance)
+    #     if form.is_valid():
+    #         print(instance.link)
+    #         return redirect('home')
+
     # elif request.method == 'GET' and 'tweet_bookmark' in request.GET:
     #     instance = get_object_or_404(Tweet, id=new_id)
     #     form = TweetBookMark(request.GET, instance=instance)
@@ -124,8 +131,12 @@ def bookmark(request, new_id):
 
 def article_summary(request, new_id):
     if request.method == 'GET' and 'feed_summary' in request.GET:
-        instance = Feeds.objects.get(id=new_id)
-        print(instance)
+        instance = get_object_or_404(Feeds, id=new_id)
+        feed_url = instance.link
+        feed_name = instance.title
+        summary = summarize(feed_url)
+        return render(request, 'summary.html', {'summary': summary, 'name': feed_name, 'link': feed_url})
+        # return render(request, 'home', {''})
         # summary = summarize()
         # instance = get_object_or_404(Feeds, id=new_id)
         # form = FeedBookMark(request.GET, instance=instance)
