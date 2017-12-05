@@ -2,5 +2,5 @@ from django.conf.urls import include, url
 from .views import Rss_view
 
 urlpatterns = [
-    url(r'^b102666bd0971ac426a28b51b421f9a982880718b1ce10e5bf/?$', Rss_view.as_view())
+    url(r'^66d2b8f4a09cd35cb23076a1da5d51529136a3373fd570b122/?$', Rss_view.as_view())
 ]
